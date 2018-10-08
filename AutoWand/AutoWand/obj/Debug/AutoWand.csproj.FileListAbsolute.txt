@@ -1,0 +1,5 @@
+C:\Users\steph\Dropbox\School\Software Systems Development\Software-System-Devlopment\AutoWand\AutoWand\obj\Debug\AutoWand.csprojAssemblyReference.cache
+C:\Users\steph\Dropbox\School\Software Systems Development\Software-System-Devlopment\AutoWand\AutoWand\obj\Debug\EmployeeLogin.g.cs
+C:\Users\steph\Dropbox\School\Software Systems Development\Software-System-Devlopment\AutoWand\AutoWand\obj\Debug\App.g.cs
+C:\Users\steph\Dropbox\School\Software Systems Development\Software-System-Devlopment\AutoWand\AutoWand\obj\Debug\AutoWand_MarkupCompile.cache
+C:\Users\steph\Dropbox\School\Software Systems Development\Software-System-Devlopment\AutoWand\AutoWand\obj\Debug\AutoWand_MarkupCompile.lref
