@@ -12,37 +12,34 @@ namespace AutoWand
     {
         //employee ID
         [XmlAttribute(DataType = "string")]
-        public string employeeID { get; set; }
+        public string EmployeeID { get; set; }
 
         //employee name info
         [XmlAttribute(DataType = "string")]
-        public string firstName { get; set; }
+        public string FirstName { get; set; }
         [XmlAttribute(DataType = "string")]
-        public string lastName { get; set; }
+        public string LastName { get; set; }
 
         //employee login information
         [XmlAttribute(DataType = "string")]
-        public string userName { get; set; }
+        public string UserName { get; set; }
         [XmlAttribute(DataType = "string")]
-        public string password { get; set; }
+        public string Password { get; set; }
         
         //employee permissions   A: Admin,   M: Manager,   E: Employee
-        [XmlAttribute(DataType = "string")]
-        public char employeePerm { get; set; }
+        [XmlAttribute]
+        public char Permission { get; set; }
 
-        public Employee()
+        public Employee() {}
+
+        public Employee(string employeeID, string firstName, string lastName, string userName, string password, char permission)
         {
-
-        }
-
-        public Employee(string employeeID, string firstName, string lastName, string userName, string password, char employeePerm)
-        {
-            this.employeeID = employeeID;
-            this.firstName = firstName;
-            this.lastName = lastName;
-            this.userName = userName;
-            this.password = password;
-            this.employeePerm = employeePerm;
+            EmployeeID = employeeID;
+            FirstName = firstName;
+            LastName = lastName;
+            UserName = userName;
+            Password = password;
+            Permission = permission;
         }
     }
 }

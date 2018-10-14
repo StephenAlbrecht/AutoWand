@@ -5,8 +5,60 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:AutoWand"
         mc:Ignorable="d"
-        Title="AddNewEmployee" Height="450" Width="800">
+        Title="Add New Employee - AutoWand" Height="450" Width="500">
     <Grid>
-        
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition Width="auto"/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <StackPanel Grid.Column="1" Grid.Row="1" Orientation="Horizontal" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="5">
+            <Label Content="First Name:"/>
+            <TextBox x:Name="FirstNameEntry" Width="185" Height="20"/>
+        </StackPanel>
+        <StackPanel Grid.Column="1" Grid.Row="2" Orientation="Horizontal" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="5">
+            <Label Content="Last Name:"/>
+            <TextBox x:Name="LastNameEntry" Width="185" Height="20"/>
+        </StackPanel>
+        <StackPanel Grid.Column="1" Grid.Row="3" Orientation="Horizontal" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="5">
+            <Label Content="Username:"/>
+            <TextBox x:Name="UsernameEntry" Width="185" Height="20"/>
+        </StackPanel>
+        <StackPanel Grid.Column="1" Grid.Row="4" Orientation="Horizontal" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="5">
+            <Label Content="Password:"/>
+            <PasswordBox x:Name="PasswordEntry" Width="185" Height="20"/>
+        </StackPanel>
+        <StackPanel Grid.Column="1" Grid.Row="5" Orientation="Horizontal" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="5">
+            <Label Content="Confirm Password:"/>
+            <PasswordBox x:Name="PasswordConfirmEntry" Width="185" Height="20"/>
+        </StackPanel>
+        <StackPanel Grid.Column="1" Grid.Row="6" Orientation="Horizontal" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="5">
+            <Label Content="Permission Level:"/>
+            <ComboBox x:Name="PermissionSelector" Width="185" Height="22"/>
+        </StackPanel>
+        <Grid Grid.Column="1" Grid.Row="7">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="56*"/>
+                <ColumnDefinition Width="95*"/>
+            </Grid.ColumnDefinitions>
+            <Label Content="Employee ID:" Grid.Column="0" Grid.Row="0" HorizontalAlignment="Right" VerticalAlignment="Center"/>
+            <Label x:Name="ID" Content="" Grid.Column="1" Grid.Row="0" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+        </Grid>
+        <StackPanel Grid.Column="1" Grid.Row="8" Orientation="Horizontal" HorizontalAlignment="Center">
+            <Button Content="Create Account" Width="120" Height="22" Margin="5" Click="CreateAccountClick"/>
+            <Button Content="Cancel" Width="120" Height="22" Margin="5" Click="CancelClick"/>
+        </StackPanel>
     </Grid>
 </Window>
