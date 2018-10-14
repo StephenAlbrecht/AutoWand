@@ -55,6 +55,7 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Service.cs" />
     <Page Include="AddNewCustomer.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -95,9 +96,11 @@
     <Compile Include="ConfirmOrder.xaml.cs">
       <DependentUpon>ConfirmOrder.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Customer.cs" />
     <Compile Include="CustomerLookup.xaml.cs">
       <DependentUpon>CustomerLookup.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Employee.cs" />
     <Compile Include="EmployeeLogin.xaml.cs">
       <DependentUpon>EmployeeLogin.xaml</DependentUpon>
       <SubType>Code</SubType>

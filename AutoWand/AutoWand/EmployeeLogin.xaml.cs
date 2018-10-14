@@ -21,8 +21,8 @@ namespace AutoWand
     /// </summary>
     public partial class EmployeeLogin : Window
     {
-        public List<int> Users = new List<int>(); // change to user class
-        XmlSerializer xmler = new XmlSerializer(typeof(List<int>));
+        public List<Employee> Employees = new List<Employee>();
+        XmlSerializer xmler = new XmlSerializer(typeof(List<Employee>));
 
         public EmployeeLogin()
         {
@@ -32,7 +32,6 @@ namespace AutoWand
 
         private void ReadInUsers()
         {
-            throw new NotImplementedException();
         }
 
         private void LogInClick(object sender, RoutedEventArgs e)
@@ -40,7 +39,7 @@ namespace AutoWand
             // if fields valid
             if (true)
             {
-                CustomerLookup lookupWin = new CustomerLookup(); // pass users
+                CustomerLookup lookupWin = new CustomerLookup(ref Employees); // pass users
             }
         }
 
@@ -49,7 +48,7 @@ namespace AutoWand
             // if fields valid and user is admin
             if (true)
             {
-                AddNewEmployee newEmployeeWin = new AddNewEmployee(); // pass users
+                AddNewEmployee newEmployeeWin = new AddNewEmployee(ref Employees); // pass users
                 newEmployeeWin.Show();
             }
         }
