@@ -19,9 +19,12 @@ namespace AutoWand
     /// </summary>
     public partial class CustomerLookup : Window
     {
-        public CustomerLookup()
+        public List<Employee> Employees = new List<Employee>();
+
+        public CustomerLookup(ref List<Employee> employees)
         {
             InitializeComponent();
+            Employees = employees;
         }
     }
 }
