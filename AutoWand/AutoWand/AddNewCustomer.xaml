@@ -5,8 +5,51 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:AutoWand"
         mc:Ignorable="d"
-        Title="AddNewCustomer" Height="450" Width="800">
+        Title="AddNewCustomer" Height="284.939" Width="433.333" ResizeMode="NoResize">
     <Grid>
-        
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+
+        <StackPanel DockPanel.Dock ="Top" Orientation="Horizontal" Grid.Row="0" VerticalAlignment="Center">
+            <Label Content="First Name" FontSize="10" Height="21" VerticalAlignment="Top"/>
+            <TextBox x:Name="fNameBox" Width="100" Height="20" VerticalAlignment="Center"/>
+
+            <Label Content="Last Name" FontSize="10" Height="21" VerticalAlignment="Top"/>
+            <TextBox x:Name="lNameBox" Width="100" Height="20" VerticalAlignment="Center"/>
+        </StackPanel>
+
+        <StackPanel DockPanel.Dock ="Top" Orientation="Horizontal" Grid.Row="1" VerticalAlignment="Center">
+            <Label Content="Street and House #" FontSize="10" Height="21" VerticalAlignment="Top"/>
+            <TextBox x:Name="streetBox" Width="100" Height="20" VerticalAlignment="Center"/>
+
+            <Label Content="City" FontSize="10" Height="23" VerticalAlignment="Top"/>
+            <TextBox x:Name="cityBox" Width="50" Height="20" VerticalAlignment="Center"/>
+
+            <Label Content="State" FontSize="10" Height="21" VerticalAlignment="Top"/>
+            <TextBox x:Name="stateBox" Width="20" Height="20" VerticalAlignment="Center"/>
+
+            <Label Content="Zipcode" FontSize="10" Height="23" VerticalAlignment="Top"/>
+            <TextBox x:Name="zipBox" Width="50" Height="20" VerticalAlignment="Center"/>
+        </StackPanel>
+
+        <StackPanel DockPanel.Dock ="Top" Orientation="Horizontal" Grid.Row="2" VerticalAlignment="Center">
+            <Label Content="Phone #" FontSize="10" Height="21" VerticalAlignment="Top"/>
+            <TextBox x:Name="phoneBox" Width="150" Height="20" VerticalAlignment="Center"/>
+        </StackPanel>
+
+        <StackPanel DockPanel.Dock ="Top" Orientation="Horizontal" Grid.Row="3" VerticalAlignment="Center">
+            <Label Content="Email Address" FontSize="10" Height="21" VerticalAlignment="Top"/>
+            <TextBox x:Name="emailBox" Width="200" Height="20" VerticalAlignment="Center"/>
+        </StackPanel>
+
+        <StackPanel DockPanel.Dock ="Top" Orientation="Horizontal" Grid.Row="4" VerticalAlignment="Center" HorizontalAlignment="Center">
+            <Button Content="Add Customer" Width="100" VerticalAlignment ="Stretch" HorizontalAlignment="Center" Margin="3" Click="addClick"/>
+            <Button Content="Cancel" Width="100" VerticalAlignment ="Stretch" HorizontalAlignment="Center" Margin="3" Click="cancelClick"/>
+        </StackPanel>
     </Grid>
 </Window>
