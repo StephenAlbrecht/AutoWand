@@ -5,8 +5,48 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:AutoWand"
         mc:Ignorable="d"
-        Title="CustomerLookup" Height="450" Width="800">
-    <Grid>
-        
-    </Grid>
+        Title="Customer Lookup" Height="450" Width="800">
+
+    <DockPanel>
+        <StackPanel DockPanel.Dock="Top" Orientation="Horizontal">
+            <Label />
+        </StackPanel>
+
+        <StackPanel DockPanel.Dock="Top" Orientation="Horizontal">
+            <Label Content="First Name" Height="25" VerticalAlignment="Top"/>
+            <TextBox x:Name="fNameBox" Width="150" Height="25" VerticalAlignment="Top"  Text="{Binding SelectedCustomer.FirstName}"/>
+
+            <Label Content="Last Name" Height="25" VerticalAlignment="Top"/>
+            <TextBox x:Name="lNameBox" Width="150" Height="25" VerticalAlignment="Top" Text="{Binding SelectedCustomer.LastName}"/>
+
+            <Label Content="Email" Height="25" VerticalAlignment="Top"/>
+            <TextBox x:Name="emailBox" Width="150" Height="25" VerticalAlignment="Top"  Text="{Binding SelectedCustomer.Email}"/>
+            
+            <Label Content="  " Height="25" VerticalAlignment="Top"/>
+            <Button x:Name="searchButton" Content = "Search" Height="22" Width="90" VerticalAlignment="Center" Click="searchButtonClick"/>
+        </StackPanel>
+
+        <StackPanel DockPanel.Dock="Top" Orientation="Horizontal">
+            <Label />
+        </StackPanel>
+
+        <StackPanel DockPanel.Dock="Bottom" Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Right">
+            <Button x:Name="selectButton" Content="Select" Width="80" Height="20" HorizontalAlignment="Right" Click="selectButton_Click" />
+            <Label Content = "  "/>
+            <Button Content="Cancel" Width="80" Height="20" HorizontalAlignment="Right" Click="cancelClick" />
+            <Label Content = "  "/>
+        </StackPanel>
+
+        <ListView ItemsSource="{Binding customerCollection}">
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn x:Name= "fNameCol" Header="FirstName" Width="102" DisplayMemberBinding="{Binding FirstName}"/>
+                    <GridViewColumn x:Name= "lNameCol" Header="LastName" Width="105" DisplayMemberBinding="{Binding LastName}"/>
+                    <GridViewColumn x:Name= "emailCol" Header="Email" Width="160" DisplayMemberBinding="{Binding Email}"/>
+                    <GridViewColumn x:Name= "addressCol" Header="Address" Width="420" DisplayMemberBinding="{Binding StreetNumber}"/>
+                </GridView>
+            </ListView.View>
+        </ListView>
+
+    </DockPanel>
 </Window>
