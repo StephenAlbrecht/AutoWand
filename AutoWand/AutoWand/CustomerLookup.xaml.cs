@@ -26,5 +26,20 @@ namespace AutoWand
             InitializeComponent();
             Employees = employees;
         }
+
+        private void searchButtonClick(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void cancelClick(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void selectButton_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }
