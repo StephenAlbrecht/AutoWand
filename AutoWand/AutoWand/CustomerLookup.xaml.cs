@@ -20,11 +20,13 @@ namespace AutoWand
     public partial class CustomerLookup : Window
     {
         public List<Employee> Employees = new List<Employee>();
+        Employee User;
 
-        public CustomerLookup(ref List<Employee> employees)
+        public CustomerLookup(ref List<Employee> employees, ref Employee user)
         {
             InitializeComponent();
             Employees = employees;
+            User = user;
         }
 
         private void searchButtonClick(object sender, RoutedEventArgs e)

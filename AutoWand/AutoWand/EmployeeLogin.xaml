@@ -19,7 +19,7 @@
             <ColumnDefinition Width="auto"/>
             <ColumnDefinition/>
         </Grid.ColumnDefinitions>
-        <StackPanel Grid.Column="1" Grid.Row="1" Orientation="Horizontal" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="5">
+        <StackPanel Grid.Column="1" Grid.Row="1" Orientation="Horizontal" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="5"  FocusManager.FocusedElement="{Binding ElementName=UsernameEntry}">
             <Label Content="Username:"/>
             <TextBox x:Name="UsernameEntry" Width="185" Height="20"/>
         </StackPanel>
@@ -28,7 +28,7 @@
             <PasswordBox x:Name="PasswordEntry" Width="185" Height="20"/>
         </StackPanel>
         <StackPanel Grid.Column="1" Grid.Row="3" Orientation="Horizontal" HorizontalAlignment="Center">
-            <Button Content="Log In" Width="120" Height="22" Margin="5" Click="LogInClick"/>
+            <Button Content="Log In" Width="120" Height="22" Margin="5" Click="LogInClick" IsDefault="True"/>
             <Button Content="Add New Employee" Width="120" Height="22" Margin="5" Click="AddNewEmployeeClick"/>
         </StackPanel>
     </Grid>

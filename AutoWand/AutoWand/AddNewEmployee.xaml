@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:AutoWand"
         mc:Ignorable="d"
         Title="Add New Employee - AutoWand" Height="450" Width="500">
-    <Grid>
+    <Grid x:Name="ParentGrid">
         <Grid.RowDefinitions>
             <RowDefinition/>
             <RowDefinition/>
@@ -22,33 +22,25 @@
         <Grid.ColumnDefinitions>
             <ColumnDefinition/>
             <ColumnDefinition Width="auto"/>
+            <ColumnDefinition Width="auto"/>
             <ColumnDefinition/>
         </Grid.ColumnDefinitions>
-        <StackPanel Grid.Column="1" Grid.Row="1" Orientation="Horizontal" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="5">
-            <Label Content="First Name:"/>
-            <TextBox x:Name="FirstNameEntry" Width="185" Height="20"/>
-        </StackPanel>
-        <StackPanel Grid.Column="1" Grid.Row="2" Orientation="Horizontal" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="5">
-            <Label Content="Last Name:"/>
-            <TextBox x:Name="LastNameEntry" Width="185" Height="20"/>
-        </StackPanel>
-        <StackPanel Grid.Column="1" Grid.Row="3" Orientation="Horizontal" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="5">
-            <Label Content="Username:"/>
-            <TextBox x:Name="UsernameEntry" Width="185" Height="20"/>
-        </StackPanel>
-        <StackPanel Grid.Column="1" Grid.Row="4" Orientation="Horizontal" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="5">
-            <Label Content="Password:"/>
-            <PasswordBox x:Name="PasswordEntry" Width="185" Height="20"/>
-        </StackPanel>
-        <StackPanel Grid.Column="1" Grid.Row="5" Orientation="Horizontal" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="5">
-            <Label Content="Confirm Password:"/>
-            <PasswordBox x:Name="PasswordConfirmEntry" Width="185" Height="20"/>
-        </StackPanel>
-        <StackPanel Grid.Column="1" Grid.Row="6" Orientation="Horizontal" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="5">
-            <Label Content="Permission Level:"/>
-            <ComboBox x:Name="PermissionSelector" Width="185" Height="22"/>
-        </StackPanel>
-        <Grid Grid.Column="1" Grid.Row="7">
+        <Label Grid.Column="1" Grid.Row="1" HorizontalAlignment="Right" VerticalAlignment="Center" Content="First Name:"/>
+        <Label Grid.Column="1" Grid.Row="2" HorizontalAlignment="Right" VerticalAlignment="Center" Content="Last Name:"/>
+        <Label Grid.Column="1" Grid.Row="3" HorizontalAlignment="Right" VerticalAlignment="Center" Content="Username:"/>
+        <Label Grid.Column="1" Grid.Row="4" HorizontalAlignment="Right" VerticalAlignment="Center" Content="Password:"/>
+        <Label Grid.Column="1" Grid.Row="5" HorizontalAlignment="Right" VerticalAlignment="Center" Content="Confirm Password:"/>
+        <Label Grid.Column="1" Grid.Row="6" HorizontalAlignment="Right" VerticalAlignment="Center" Content="Permission Level:"/>
+        <Label Grid.Column="3" Grid.Row="6" VerticalAlignment="Center" Foreground="Red" Content="*" x:Name="PermissionError" Visibility="Hidden"/>
+
+        <TextBox     TextChanged="TextBoxChanged" MaxLength="20" Grid.Column="2" Grid.Row="1" x:Name="FirstNameEntry" Width="185" Height="20"/>
+        <TextBox     TextChanged="TextBoxChanged" MaxLength="20" Grid.Column="2" Grid.Row="2" x:Name="LastNameEntry" Width="185" Height="20"/>
+        <TextBox     TextChanged="TextBoxChanged" MaxLength="20" Grid.Column="2" Grid.Row="3" x:Name="UsernameEntry" Width="185" Height="20"/>
+        <PasswordBox PasswordChanged="PasswordBoxChanged" MaxLength="20" Grid.Column="2" Grid.Row="4" x:Name="PasswordEntry" Width="185" Height="20"/>
+        <PasswordBox PasswordChanged="PasswordBoxChanged" MaxLength="20" Grid.Column="2" Grid.Row="5" x:Name="PasswordConfirmEntry" Width="185" Height="20"/>
+        <ComboBox    Grid.Column="2" Grid.Row="6" x:Name="PermissionSelector" Width="185" Height="22" PreviewMouseLeftButtonDown="PermissionClicked" SelectionChanged="PermissionChanged"/>
+        
+        <Grid Grid.Column="1" Grid.Row="7" Grid.ColumnSpan="2">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="56*"/>
                 <ColumnDefinition Width="95*"/>
@@ -56,9 +48,9 @@
             <Label Content="Employee ID:" Grid.Column="0" Grid.Row="0" HorizontalAlignment="Right" VerticalAlignment="Center"/>
             <Label x:Name="ID" Content="" Grid.Column="1" Grid.Row="0" HorizontalAlignment="Left" VerticalAlignment="Center"/>
         </Grid>
-        <StackPanel Grid.Column="1" Grid.Row="8" Orientation="Horizontal" HorizontalAlignment="Center">
-            <Button Content="Create Account" Width="120" Height="22" Margin="5" Click="CreateAccountClick"/>
-            <Button Content="Cancel" Width="120" Height="22" Margin="5" Click="CancelClick"/>
+        <StackPanel Grid.Column="1" Grid.Row="8" Orientation="Horizontal" HorizontalAlignment="Center" Grid.ColumnSpan="2">
+            <Button Content="Create Account" Width="120" Height="22" Margin="5" Click="CreateAccountClick" IsDefault="True"/>
+            <Button Content="Cancel" Width="120" Height="22" Margin="5" Click="CancelClick" IsCancel="True"/>
         </StackPanel>
     </Grid>
 </Window>

@@ -1,0 +1,6 @@
+<?xml version="1.0"?>
+<ArrayOfEmployee xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Employee ID="000000" FirstName="admin" LastName="" UserName="admin" Password="1" Permission="65" />
+  <Employee ID="450147" FirstName="Ted" LastName="Danson" UserName="tdanson" Password="cheers" Permission="77" />
+  <Employee ID="348012" FirstName="Shelley" LastName="Long" UserName="slong" Password="cheers" Permission="69" />
+</ArrayOfEmployee>

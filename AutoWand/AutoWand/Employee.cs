@@ -12,7 +12,7 @@ namespace AutoWand
     {
         //employee ID
         [XmlAttribute(DataType = "string")]
-        public string EmployeeID { get; set; }
+        public string ID { get; set; }
 
         //employee name info
         [XmlAttribute(DataType = "string")]
@@ -32,14 +32,19 @@ namespace AutoWand
 
         public Employee() {}
 
-        public Employee(string employeeID, string firstName, string lastName, string userName, string password, char permission)
+        public Employee(string id, string firstName, string lastName, string userName, string password, char permission)
         {
-            EmployeeID = employeeID;
+            ID = id;
             FirstName = firstName;
             LastName = lastName;
             UserName = userName;
             Password = password;
             Permission = permission;
+        }
+
+        override public string ToString()
+        {
+            return $"{ID}: {LastName}, {FirstName}, {UserName}";
         }
     }
 }

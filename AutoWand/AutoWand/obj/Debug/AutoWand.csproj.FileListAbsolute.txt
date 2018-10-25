@@ -23,3 +23,28 @@ C:\Users\steph\Dropbox\School\Software Systems Development\Software-System-Devlo
 C:\Users\steph\Dropbox\School\Software Systems Development\Software-System-Devlopment\AutoWand\AutoWand\obj\Debug\AutoWand.csproj.CoreCompileInputs.cache
 C:\Users\steph\Dropbox\School\Software Systems Development\Software-System-Devlopment\AutoWand\AutoWand\obj\Debug\AutoWand.exe
 C:\Users\steph\Dropbox\School\Software Systems Development\Software-System-Devlopment\AutoWand\AutoWand\obj\Debug\AutoWand.pdb
+C:\Users\steph\Dropbox\School\Software-System-Devlopment\AutoWand\AutoWand\bin\Debug\AutoWand.exe.config
+C:\Users\steph\Dropbox\School\Software-System-Devlopment\AutoWand\AutoWand\bin\Debug\AutoWand.exe
+C:\Users\steph\Dropbox\School\Software-System-Devlopment\AutoWand\AutoWand\bin\Debug\AutoWand.pdb
+C:\Users\steph\Dropbox\School\Software-System-Devlopment\AutoWand\AutoWand\obj\Debug\AutoWand.csprojAssemblyReference.cache
+C:\Users\steph\Dropbox\School\Software-System-Devlopment\AutoWand\AutoWand\obj\Debug\AddNewCustomer.g.cs
+C:\Users\steph\Dropbox\School\Software-System-Devlopment\AutoWand\AutoWand\obj\Debug\AddNewEmployee.g.cs
+C:\Users\steph\Dropbox\School\Software-System-Devlopment\AutoWand\AutoWand\obj\Debug\Cart.g.cs
+C:\Users\steph\Dropbox\School\Software-System-Devlopment\AutoWand\AutoWand\obj\Debug\ConfirmOrder.g.cs
+C:\Users\steph\Dropbox\School\Software-System-Devlopment\AutoWand\AutoWand\obj\Debug\CustomerLookup.g.cs
+C:\Users\steph\Dropbox\School\Software-System-Devlopment\AutoWand\AutoWand\obj\Debug\EmployeeLogin.g.cs
+C:\Users\steph\Dropbox\School\Software-System-Devlopment\AutoWand\AutoWand\obj\Debug\App.g.cs
+C:\Users\steph\Dropbox\School\Software-System-Devlopment\AutoWand\AutoWand\obj\Debug\AutoWand_MarkupCompile.cache
+C:\Users\steph\Dropbox\School\Software-System-Devlopment\AutoWand\AutoWand\obj\Debug\AutoWand_MarkupCompile.lref
+C:\Users\steph\Dropbox\School\Software-System-Devlopment\AutoWand\AutoWand\obj\Debug\AddNewCustomer.baml
+C:\Users\steph\Dropbox\School\Software-System-Devlopment\AutoWand\AutoWand\obj\Debug\AddNewEmployee.baml
+C:\Users\steph\Dropbox\School\Software-System-Devlopment\AutoWand\AutoWand\obj\Debug\Cart.baml
+C:\Users\steph\Dropbox\School\Software-System-Devlopment\AutoWand\AutoWand\obj\Debug\ConfirmOrder.baml
+C:\Users\steph\Dropbox\School\Software-System-Devlopment\AutoWand\AutoWand\obj\Debug\CustomerLookup.baml
+C:\Users\steph\Dropbox\School\Software-System-Devlopment\AutoWand\AutoWand\obj\Debug\EmployeeLogin.baml
+C:\Users\steph\Dropbox\School\Software-System-Devlopment\AutoWand\AutoWand\obj\Debug\AutoWand.g.resources
+C:\Users\steph\Dropbox\School\Software-System-Devlopment\AutoWand\AutoWand\obj\Debug\AutoWand.Properties.Resources.resources
+C:\Users\steph\Dropbox\School\Software-System-Devlopment\AutoWand\AutoWand\obj\Debug\AutoWand.csproj.GenerateResource.cache
+C:\Users\steph\Dropbox\School\Software-System-Devlopment\AutoWand\AutoWand\obj\Debug\AutoWand.csproj.CoreCompileInputs.cache
+C:\Users\steph\Dropbox\School\Software-System-Devlopment\AutoWand\AutoWand\obj\Debug\AutoWand.exe
+C:\Users\steph\Dropbox\School\Software-System-Devlopment\AutoWand\AutoWand\obj\Debug\AutoWand.pdb
