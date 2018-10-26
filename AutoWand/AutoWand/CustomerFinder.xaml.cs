@@ -142,7 +142,7 @@ namespace AutoWand
 
         private void cancelClick(object sender, RoutedEventArgs e)
         {
-            this.Close();
+            Close();
         }
 
         

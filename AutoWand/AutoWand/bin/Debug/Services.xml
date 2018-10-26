@@ -1,9 +1,9 @@
 <?xml version="1.0"?>
 <ArrayOfService xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
-  <Service Name="Engine Oil Change - REG" PartsCost="20.0" LaborCost="20.0"/>
-  <Service Name="Engine Oil Change - SYN" PartsCost="60.0" LaborCost="20.0"/>
-  <Service Name="Transmission Oil Change" PartsCost="60.0" LaborCost="50.0"/>
-  <Service Name="Alignment" PartsCost="0.0" LaborCost="100.00"/>
-  <Service Name="Tire Service" PartsCost="0.0" LaborCost="100.00"/>
-  <Service Name="Tire Replacement" PartsCost="800.00" LaborCost="50.00"/>
+  <Service Name="Engine Oil Change - REG" PartsCost="20.0" LaborCost="20.0" Total="40.0"/>
+  <Service Name="Engine Oil Change - SYN" PartsCost="60.0" LaborCost="20.0" Total="80.0"/>
+  <Service Name="Transmission Oil Change" PartsCost="60.0" LaborCost="50.0" Total="110.0"/>
+  <Service Name="Alignment" PartsCost="0.0" LaborCost="100.00" Total="100.0"/>
+  <Service Name="Tire Service" PartsCost="0.0" LaborCost="100.00" Total="100.0"/>
+  <Service Name="Tire Replacement" PartsCost="800.00" LaborCost="50.00" Total="850.0"/>
 </ArrayOfService>

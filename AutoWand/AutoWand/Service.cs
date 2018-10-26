@@ -18,14 +18,18 @@ namespace AutoWand
         public double PartsCost { get; set; }
         [XmlAttribute(DataType = "double")]
         public double LaborCost { get; set; }
+        [XmlAttribute(DataType = "double")]
+        public double Total { get; set;  }
 
         public Service() {}
 
-        public Service(string name, double partsCost, double laborCost)
+        public Service(string name, double partsCost, double laborCost, double total)
         {
             Name = name;
             PartsCost = partsCost;
             LaborCost = laborCost;
+            //Total = PartsCost + LaborCost;
+            Total = total;
         }
     }
 }
