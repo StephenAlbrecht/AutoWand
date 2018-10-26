@@ -8,4 +8,5 @@
   <Customer FirstName="Simona" LastName="Morasca" Address="3 Mcauley Dr Ashland Ashland OH" PhoneNumber="4195032484" EmailAddress="simona@morasca.com" />
   <Customer FirstName="Jeff" LastName="Goldblum" Address="11 Love Lane, Los Angeles, CA, 11233" PhoneNumber="1241325413" EmailAddress="jgoldbum@hotmail.com" />
   <Customer FirstName="Rufus" LastName="Timm" Address="1234 Cat Corner, Catville, PA, 11020" PhoneNumber="9091230912" EmailAddress="imacat@cats.com" />
+  <Customer FirstName="Art" LastName="Venere" Address="123 Hungry St, Hungary, AZ, 12314" PhoneNumber="1039587130" EmailAddress="erenevtra@aol.biz" />
 </ArrayOfCustomer>
