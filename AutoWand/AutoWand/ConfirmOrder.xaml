@@ -5,8 +5,37 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:AutoWand"
         mc:Ignorable="d"
-        Title="ConfirmOrder" Height="450" Width="800">
-    <Grid>
-        
-    </Grid>
+        Title="ConfirmOrder" Height="684.221" Width="466.189" ResizeMode="NoResize">
+    <DockPanel>
+        <StackPanel DockPanel.Dock="Top">
+            <StackPanel Orientation="Horizontal" >
+                <Label Content="Employee:" />
+                <Label x:Name="userInfo" Content="  "/>
+            </StackPanel>
+            
+            <StackPanel Orientation="Horizontal" >
+                <Label Content="Customer Info:" />
+                <Label x:Name="custInfo" Content="  "/>
+            </StackPanel>
+
+            <StackPanel x:Name="servicesList" Height="500" Width="380">
+                
+            </StackPanel>
+
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" >
+                <Label Content="Subtotal:" />
+                <Label x:Name="subtotal" Content="  "/>
+            </StackPanel>
+
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                <Label Content="Tax:" />
+                <Label x:Name="taxLabel" Content="  "/>
+            </StackPanel>
+
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                <Label Content="Total:" />
+                <Label x:Name="total" Content="  "/>
+            </StackPanel>
+        </StackPanel>
+    </DockPanel>
 </Window>
