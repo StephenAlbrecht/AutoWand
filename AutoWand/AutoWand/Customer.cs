@@ -26,6 +26,11 @@ namespace AutoWand
         [XmlAttribute(DataType = "string")]
         public string EmailAddress { get; set; }
 
+        public override string ToString()
+        {
+            return $"{firstName}   {lastName}   {emailAddress}   {phoneNumber}";
+        }
+
         public Customer()
         {
 

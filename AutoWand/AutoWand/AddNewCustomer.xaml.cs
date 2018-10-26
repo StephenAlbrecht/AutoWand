@@ -46,8 +46,10 @@ namespace AutoWand
                     tempCust.EmailAddress = emailBox.Text;
                 }
                 customerList.Add(tempCust);
-
                 writeCustomers();
+
+                MessageBox.Show("Customer was Added");
+                this.Close();
             }
         }
 
@@ -81,7 +83,7 @@ namespace AutoWand
         private bool verifyData() {
             bool control = true;
 
-            if (string.IsNullOrWhiteSpace(fNameBox.Text) || string.IsNullOrWhiteSpace(lNameBox.Text) || ValidateAlphabetical(fNameBox.Text) || ValidateAlphabetical(lNameBox.Text))
+            if (string.IsNullOrWhiteSpace(fNameBox.Text) || string.IsNullOrWhiteSpace(lNameBox.Text) || !ValidateAlphabetical(fNameBox.Text) || !ValidateAlphabetical(lNameBox.Text))
             {
                 MessageBox.Show("A valid name and address must be given for billing purposes!");
                 control = false;
