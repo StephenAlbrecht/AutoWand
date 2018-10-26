@@ -59,8 +59,6 @@
             <Label Content = "  "/>
         </StackPanel>
 
-        <ListView x:Name="customerBox" ItemsSource="customer">
-            
-        </ListView>
+        <ListView x:Name="customerBox"/>
     </DockPanel>
 </Window>

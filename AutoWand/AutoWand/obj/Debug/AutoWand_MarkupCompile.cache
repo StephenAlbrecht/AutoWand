@@ -4,17 +4,12 @@
 winexe
 C#
 .cs
-<<<<<<< HEAD
-C:\Users\Beast\Documents\College\C3\Midterm\Software-System-Devlopment\AutoWand\AutoWand\obj\Debug\
-=======
-C:\Users\steph\Dropbox\School\Software-System-Devlopment\AutoWand\AutoWand\obj\Debug\
->>>>>>> 73c456e1f23876e2e1d14dd2a89b2ae17bb13696
+C:\Users\Beast\Documents\College\C3\Software-System-Devlopment\AutoWand\AutoWand\obj\Debug\
 AutoWand
 none
 false
 DEBUG;TRACE
-<<<<<<< HEAD
-C:\Users\Beast\Documents\College\C3\Midterm\Software-System-Devlopment\AutoWand\AutoWand\App.xaml
+C:\Users\Beast\Documents\College\C3\Software-System-Devlopment\AutoWand\AutoWand\App.xaml
 650672625
 
 131607083257
@@ -22,14 +17,4 @@ C:\Users\Beast\Documents\College\C3\Midterm\Software-System-Devlopment\AutoWand\
 AddNewCustomer.xaml;AddNewEmployee.xaml;Cart.xaml;ConfirmOrder.xaml;CustomerFinder.xaml;EmployeeLogin.xaml;
 
 False
-=======
-C:\Users\steph\Dropbox\School\Software-System-Devlopment\AutoWand\AutoWand\App.xaml
-650672625
-
-172016374093
-131569487696
-AddNewCustomer.xaml;AddNewEmployee.xaml;Cart.xaml;ConfirmOrder.xaml;CustomerFinder.xaml;EmployeeLogin.xaml;
-
-True
->>>>>>> 73c456e1f23876e2e1d14dd2a89b2ae17bb13696
 

@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<ArrayOfCustomer xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Customer firstName="James" lastName="Butt" custAddr="6649 N Blue Gum St New Orleans Orleans LA 70116" phoneNumber="504845142" emailAddress="jbutt@gmail.com" />
+  <Customer firstName="Joesphine" lastName="Darakjy" custAddr="4 B Blue Ridge Blvd Brighton Livingston MI 48116" phoneNumber="810374984" emailAddress="josephine_darakjy@darakjy.org" />
+  <Customer firstName="Art" lastName="Venere" custAddr="8 W Cerritos Ave #54 Bridgeport Gloucester NJ 80143" phoneNumber="504303142" emailAddress="Aven@gmail.com" />
+  <Customer firstName="Lenna" lastName="Paprocki" custAddr="639 Main St Anchorage Anchorage AK 99501" phoneNumber="451374578" emailAddress="paprocki@email.org" />
+  <Customer firstName="Donnette" lastName="Foller" custAddr="34 Center St Hamilton Butler OH 45011" phoneNumber="513570189" emailAddress="donette.foller@cox.net" />
+  <Customer firstName="Simona" lastName="Morasca" custAddr="3 Mcauley Dr Ashland Ashland OH" phoneNumber="4195032484" emailAddress="simona@morasca.com" />
+  <Customer firstName="asdf" lastName="asdf" custAddr="asdf, asdf, df, 124124" phoneNumber="asdf" emailAddress="asdf" />
+</ArrayOfCustomer>

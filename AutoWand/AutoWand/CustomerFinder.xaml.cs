@@ -47,6 +47,7 @@ namespace AutoWand
             {
                 readCustomersFromMem();
             }
+            customerBox.ItemsSource = customerCollection;
         }
 
         //Helper functions for validation and searching through the list to find customers
@@ -94,6 +95,8 @@ namespace AutoWand
         
         private void searchNameButtonClick(object sender, RoutedEventArgs e)
         {
+            ObservableCollection<Customer> customerOutCol = new ObservableCollection<Customer>();
+
             if (string.IsNullOrWhiteSpace(fNameBox.Text) || string.IsNullOrWhiteSpace(lNameBox.Text) 
                 || !ValidateAlphabetical(fNameBox.Text) || !ValidateAlphabetical(lNameBox.Text))
             {
@@ -102,11 +105,14 @@ namespace AutoWand
             else
             {
                 custOut = searchByName(fNameBox.Text, lNameBox.Text);
+                customerOutCol.Add(custOut);
+                customerBox.ItemsSource = customerOutCol;
             }
         }
 
         private void searchPhoneButton_Click(object sender, RoutedEventArgs e)
         {
+            ObservableCollection<Customer> customerOutCol = new ObservableCollection<Customer>();
             if (string.IsNullOrWhiteSpace(phoneBox.Text) ||  !ValidateNumerical(phoneBox.Text))
             {
                 MessageBox.Show("Please enter a valid phone number to search for!");
@@ -114,11 +120,14 @@ namespace AutoWand
             else
             {
                 custOut = searchByPhone(phoneBox.Text);
+                customerOutCol.Add(custOut);
+                customerBox.ItemsSource = customerOutCol;
             }
         }
 
         private void searchEmailButton_Click(object sender, RoutedEventArgs e)
         {
+            ObservableCollection<Customer> customerOutCol = new ObservableCollection<Customer>();
             if (string.IsNullOrWhiteSpace(emailBox.Text))
             {
                MessageBox.Show("Please enter a valid email address to search for!");
@@ -126,6 +135,8 @@ namespace AutoWand
             else
             {
                 custOut = searchByEmail(emailBox.Text);
+                customerOutCol.Add(custOut);
+                customerBox.ItemsSource = customerOutCol;
             }
         }
 
@@ -146,8 +157,8 @@ namespace AutoWand
             Customer output = customerBox.SelectedItem as Customer;
             if (output != null)
             {
-                Cart newCart = new Cart(ref User, ref custOut);  //This still needs to be edited to pass customers and employees to the cart window
-                newCart.ShowDialog();
+                //Cart newCart = new Cart(ref User, ref custOut);  //This still needs to be edited to pass customers and employees to the cart window
+                //newCart.ShowDialog();
             }
         }
     }
