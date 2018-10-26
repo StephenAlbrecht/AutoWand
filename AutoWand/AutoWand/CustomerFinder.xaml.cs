@@ -157,8 +157,8 @@ namespace AutoWand
             Customer output = customerBox.SelectedItem as Customer;
             if (output != null)
             {
-                //Cart newCart = new Cart(ref User, ref custOut);  //This still needs to be edited to pass customers and employees to the cart window
-                //newCart.ShowDialog();
+                Cart newCart = new Cart(ref User, ref output);  //This still needs to be edited to pass customers and employees to the cart window
+                newCart.ShowDialog();
             }
         }
     }

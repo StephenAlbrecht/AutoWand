@@ -1,10 +1,9 @@
 <?xml version="1.0"?>
 <ArrayOfCustomer xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
-  <Customer firstName="James" lastName="Butt" custAddr="6649 N Blue Gum St New Orleans Orleans LA 70116" phoneNumber="504845142" emailAddress="jbutt@gmail.com" />
-  <Customer firstName="Joesphine" lastName="Darakjy" custAddr="4 B Blue Ridge Blvd Brighton Livingston MI 48116" phoneNumber="810374984" emailAddress="josephine_darakjy@darakjy.org" />
-  <Customer firstName="Art" lastName="Venere" custAddr="8 W Cerritos Ave #54 Bridgeport Gloucester NJ 80143" phoneNumber="504303142" emailAddress="Aven@gmail.com" />
-  <Customer firstName="Lenna" lastName="Paprocki" custAddr="639 Main St Anchorage Anchorage AK 99501" phoneNumber="451374578" emailAddress="paprocki@email.org" />
-  <Customer firstName="Donnette" lastName="Foller" custAddr="34 Center St Hamilton Butler OH 45011" phoneNumber="513570189" emailAddress="donette.foller@cox.net" />
-  <Customer firstName="Simona" lastName="Morasca" custAddr="3 Mcauley Dr Ashland Ashland OH" phoneNumber="4195032484" emailAddress="simona@morasca.com" />
-  <Customer firstName="asdf" lastName="asfd" custAddr="asfd, asfd, dsf, 124244" phoneNumber="" emailAddress="asdfasdf" />
+  <Customer FirstName="James" LastName="Butt" Address="6649 N Blue Gum St New Orleans Orleans LA 70116" PhoneNumber="504845142" EmailAddress="jbutt@gmail.com" />
+  <Customer FirstName="Joesphine" LastName="Darakjy" Address="4 B Blue Ridge Blvd Brighton Livingston MI 48116" PhoneNumber="810374984" EmailAddress="josephine_darakjy@darakjy.org" />
+  <Customer FirstName="Art" LastName="Venere" Address="8 W Cerritos Ave #54 Bridgeport Gloucester NJ 80143" PhoneNumber="504303142" EmailAddress="Aven@gmail.com" />
+  <Customer FirstName="Lenna" LastName="Paprocki" Address="639 Main St Anchorage Anchorage AK 99501" PhoneNumber="451374578" EmailAddress="paprocki@email.org" />
+  <Customer FirstName="Donnette" LastName="Foller" Address="34 Center St Hamilton Butler OH 45011" PhoneNumber="513570189" EmailAddress="donette.foller@cox.net" />
+  <Customer FirstName="Simona" LastName="Morasca" Address="3 Mcauley Dr Ashland Ashland OH" PhoneNumber="4195032484" EmailAddress="simona@morasca.com" />
 </ArrayOfCustomer>

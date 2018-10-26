@@ -28,14 +28,16 @@ namespace AutoWand
         XmlSerializer xmler = new XmlSerializer(typeof(ObservableCollection<Service>));
         ObservableCollection<Service> Services = new ObservableCollection<Service>();
         ObservableCollection<Service> CartServices = new ObservableCollection<Service>();
+        List<string> VehicleInfo = new List<string>();
 
         public Cart(ref Employee user, ref Customer customer)
         {
             InitializeComponent();
             Customer = customer;
             User = user;
-            CustomerLabel.Content = $"Customer: {Customer.ToString()}";
+            CustomerLabel.Content = $"Customer: {Customer.FirstName} {Customer.LastName}";
             ReadInServices();
+            ServicesListBox.ItemsSource = Services;
         }
 
         private void ReadInServices()
@@ -56,6 +58,18 @@ namespace AutoWand
         }
 
         private void RemoveFromCart(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void SubmitCommand(object sender, RoutedEventArgs e)
+        {
+            // if fields valid
+            ConfirmOrder confirmWin = new ConfirmOrder(ref User, ref Customer, ref CartServices, ref VehicleInfo);
+            confirmWin.ShowDialog();
+        }
+
+        private void CancelCommand(object sender, RoutedEventArgs e)
         {
 
         }

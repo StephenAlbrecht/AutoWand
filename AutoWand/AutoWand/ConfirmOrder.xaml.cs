@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -19,7 +20,7 @@ namespace AutoWand
     /// </summary>
     public partial class ConfirmOrder : Window
     {
-        public ConfirmOrder()
+        public ConfirmOrder(ref Employee user, ref Customer customer, ref ObservableCollection<Service> services, ref List<string> vehicleInfo)
         {
             InitializeComponent();
         }

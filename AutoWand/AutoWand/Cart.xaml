@@ -11,7 +11,7 @@
         <DataTemplate x:Key="ServiceTemplate">
             <Grid>
                 <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="190"/>
+                    <ColumnDefinition Width="150"/>
                     <ColumnDefinition Width="60"/>
                     <ColumnDefinition Width="60"/>
                 </Grid.ColumnDefinitions>
@@ -109,8 +109,8 @@
         <Button Grid.Column="2" Grid.Row="8" Content="Remove from Cart" Width="130" Height="30" Click="RemoveFromCart"/>
 
         <StackPanel Orientation="Horizontal" Grid.Column="3" Grid.Row="13" HorizontalAlignment="Right">
-            <Button Width="120" Height="22" Content="Continue" Margin="0,0,10,0"/>
-            <Button Width="120" Height="22" Content="Cancel" IsCancel="True"/>
+            <Button Width="120" Height="22" Content="Continue" Margin="0,0,10,0" Click="SubmitCommand"/>
+            <Button Width="120" Height="22" Content="Cancel" IsCancel="True" Click="CancelCommand"/>
         </StackPanel>
     </Grid>
 </Window>
