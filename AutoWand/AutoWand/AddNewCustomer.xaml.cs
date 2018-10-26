@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -35,16 +36,35 @@ namespace AutoWand
             if (verifyData())
             {
                 Customer tempCust = new Customer();
-                tempCust.FirstName = fNameBox.Text;
-                tempCust.LastName = lNameBox.Text;
-                tempCust.Address = $"{streetBox.Text}, {cityBox.Text}, {stateBox.Text}, {zipBox.Text}";
+                tempCust.firstName = fNameBox.Text;
+                tempCust.lastName = lNameBox.Text;
+                tempCust.phoneNumber = phoneBox.Text;
+                tempCust.custAddr = $"{streetBox.Text}, {cityBox.Text}, {stateBox.Text}, {zipBox.Text}";
 
                 if (!string.IsNullOrWhiteSpace(emailBox.Text))
                 {
                     tempCust.EmailAddress = emailBox.Text;
                 }
-
                 customerList.Add(tempCust);
+
+                writeCustomers();
+            }
+        }
+
+        private void writeCustomers()
+        {
+            string path = "Students.xml";
+
+            if (customerList.Count == 0 && File.Exists(path))
+            {
+                File.Delete(path);
+            }
+            else
+            {
+                using (FileStream fileStream = new FileStream(path, FileMode.Create, FileAccess.ReadWrite))
+                {
+                    xmler.Serialize(fileStream, customerList);
+                }
             }
         }
 
@@ -75,6 +95,11 @@ namespace AutoWand
             else if (!ValidateNumerical(phoneBox.Text) && string.IsNullOrWhiteSpace(phoneBox.Text))
             {
                 phoneBox.Background = Brushes.Red;
+                control = false;
+            }
+            else if (string.IsNullOrWhiteSpace(emailBox.Text))
+            {
+                emailBox.Background = Brushes.Red;
                 control = false;
             }
 

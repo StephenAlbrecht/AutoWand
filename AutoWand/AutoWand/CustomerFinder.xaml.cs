@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -12,6 +13,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using System.Xml.Serialization;
 
 namespace AutoWand
 {
@@ -25,12 +27,26 @@ namespace AutoWand
 
         public ObservableCollection<Customer> customerCollection = new ObservableCollection<Customer>();
         public Customer custOut = new Customer();
+        XmlSerializer serializer = new XmlSerializer(typeof(ObservableCollection<Customer>));
+
+        string path = "Customers.xml";
+        private void readCustomersFromMem()
+        {
+            using (FileStream readStream = new FileStream(path, FileMode.Open, FileAccess.Read))
+            {
+                customerCollection = serializer.Deserialize(readStream) as ObservableCollection<Customer>;
+            }
+        }
 
         public CustomerFinder(ref List<Employee> employees, ref Employee user)
         {
             InitializeComponent();
             Employees = employees;
             User = user;
+            if (File.Exists(path))
+            {
+                readCustomersFromMem();
+            }
         }
 
         //Helper functions for validation and searching through the list to find customers
@@ -56,11 +72,11 @@ namespace AutoWand
             }
             return null;
         }
-        private Customer searchByPhone(int phoneNumber)
+        private Customer searchByPhone(string phoneNumber)
         {
             foreach (Customer temp in customerCollection)
             {
-                if (phoneNumber == temp.PhoneNumber)
+                if (phoneNumber.Equals(temp.phoneNumber))
                 {
                     return temp;
                 }
@@ -75,18 +91,17 @@ namespace AutoWand
         {
             return tester.Where(x => char.IsNumber(x)).Count() == tester.Length; // lambda checking each char in string for letter
         }
-
-
+        
         private void searchNameButtonClick(object sender, RoutedEventArgs e)
         {
             if (string.IsNullOrWhiteSpace(fNameBox.Text) || string.IsNullOrWhiteSpace(lNameBox.Text) 
                 || !ValidateAlphabetical(fNameBox.Text) || !ValidateAlphabetical(lNameBox.Text))
             {
-                custOut = searchByName(fNameBox.Text, lNameBox.Text);
+                MessageBox.Show("Please enter valid names to search for!");
             }
             else
             {
-                MessageBox.Show("Please enter valid names to search for!");
+                custOut = searchByName(fNameBox.Text, lNameBox.Text);
             }
         }
 
@@ -94,11 +109,11 @@ namespace AutoWand
         {
             if (string.IsNullOrWhiteSpace(phoneBox.Text) ||  !ValidateNumerical(phoneBox.Text))
             {
-                custOut = searchByPhone(int.Parse(phoneBox.Text));
+                MessageBox.Show("Please enter a valid phone number to search for!");
             }
             else
             {
-                MessageBox.Show("Please enter a valid phone number to search for!");
+                custOut = searchByPhone(phoneBox.Text);
             }
         }
 
@@ -106,11 +121,11 @@ namespace AutoWand
         {
             if (string.IsNullOrWhiteSpace(emailBox.Text))
             {
-                custOut = searchByEmail(emailBox.Text);
+               MessageBox.Show("Please enter a valid email address to search for!");
             }
             else
             {
-                MessageBox.Show("Please enter a valid email address to search for!");
+                custOut = searchByEmail(emailBox.Text);
             }
         }
 
@@ -132,6 +147,7 @@ namespace AutoWand
             if (output != null)
             {
                 Cart newCart = new Cart(ref User, ref custOut);  //This still needs to be edited to pass customers and employees to the cart window
+                newCart.ShowDialog();
             }
         }
     }

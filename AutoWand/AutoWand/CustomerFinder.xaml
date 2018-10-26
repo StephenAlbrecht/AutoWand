@@ -27,7 +27,7 @@
         <StackPanel DockPanel.Dock="Top" Orientation="Horizontal" VerticalAlignment="Center" Height="30">
 
             <Label Content="Email" Height="25" VerticalAlignment="Top"/>
-            <TextBox x:Name="emailBox" Width="150" Height="25" VerticalAlignment="Top"  Text="{Binding SelectedCustomer.Email}"/>
+            <TextBox x:Name="emailBox" Width="150" Height="25" VerticalAlignment="Top"/>
            
             <Label Content="  " Height="25" VerticalAlignment="Top"/>
             <Button x:Name="searchEmailButton" Content = "Search By Email" Height="22" Width="110" VerticalAlignment="Center" Click="searchEmailButton_Click"/>
@@ -59,15 +59,8 @@
             <Label Content = "  "/>
         </StackPanel>
 
-        <ListView x:Name="customerBox" ItemsSource="{Binding customerOut}">
-            <ListView.View>
-                <GridView>
-                    <GridViewColumn x:Name= "fNameCol" Header="FirstName" Width="102" DisplayMemberBinding="{Binding FirstName}"/>
-                    <GridViewColumn x:Name= "lNameCol" Header="LastName" Width="105" DisplayMemberBinding="{Binding LastName}"/>
-                    <GridViewColumn x:Name= "emailCol" Header="Email" Width="160" DisplayMemberBinding="{Binding Email}"/>
-                    <GridViewColumn x:Name= "addressCol" Header="Address" Width="420" DisplayMemberBinding="{Binding StreetNumber}"/>
-                </GridView>
-            </ListView.View>
+        <ListView x:Name="customerBox" ItemsSource="customer">
+            
         </ListView>
     </DockPanel>
 </Window>
