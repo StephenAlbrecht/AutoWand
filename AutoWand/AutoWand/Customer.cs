@@ -21,8 +21,8 @@ namespace AutoWand
         public string custAddr { get; set; } //we will simply take all of the different address elements
                                                //and add them to a single string
         //personal contact details
-        [XmlAttribute(DataType = "int")]
-        public int phoneNumber { get; set; }
+        [XmlAttribute(DataType = "string")]
+        public string phoneNumber { get; set; }
         [XmlAttribute(DataType = "string")]
         public string emailAddress { get; set; }
 
@@ -31,7 +31,7 @@ namespace AutoWand
 
         }
 
-        public Customer(string firstName, string lastName, string custAddr, int phoneNumber, string emailAddress)
+        public Customer(string firstName, string lastName, string custAddr, string phoneNumber, string emailAddress)
         {
             this.firstName = firstName;
             this.lastName = lastName;
