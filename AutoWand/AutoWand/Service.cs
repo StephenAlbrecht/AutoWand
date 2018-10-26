@@ -13,7 +13,7 @@ namespace AutoWand
     {
         //elements of a service
         [XmlAttribute(DataType = "String")]
-        public string ServiceName { get; set; }
+        public string Name { get; set; }
         [XmlAttribute(DataType = "Double")]
         public double PartsCost { get; set; }
         [XmlAttribute(DataType = "Double")]
@@ -21,9 +21,9 @@ namespace AutoWand
 
         public Service() {}
 
-        public Service(string serviceName, double partsCost, double laborCost)
+        public Service(string name, double partsCost, double laborCost)
         {
-            ServiceName = serviceName;
+            Name = name;
             PartsCost = partsCost;
             LaborCost = laborCost;
         }
