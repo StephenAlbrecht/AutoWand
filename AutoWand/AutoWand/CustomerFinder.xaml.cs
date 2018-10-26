@@ -76,7 +76,7 @@ namespace AutoWand
         {
             foreach (Customer temp in customerCollection)
             {
-                if (phoneNumber.Equals(temp.phoneNumber))
+                if (phoneNumber.Equals(temp.PhoneNumber))
                 {
                     return temp;
                 }

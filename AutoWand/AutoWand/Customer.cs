@@ -22,7 +22,7 @@ namespace AutoWand
                                                //and add them to a single string
         //personal contact details
         [XmlAttribute(DataType = "string")]
-        public string phoneNumber { get; set; }
+        public string PhoneNumber { get; set; }
         [XmlAttribute(DataType = "string")]
         public string EmailAddress { get; set; }
 
@@ -31,7 +31,7 @@ namespace AutoWand
 
         }
 
-        public Customer(string firstName, string lastName, string custAddr, string phoneNumber, string emailAddress)
+        public Customer(string firstName, string lastName, string address, string phoneNumber, string emailAddress)
         {
             FirstName = firstName;
             LastName = lastName;
