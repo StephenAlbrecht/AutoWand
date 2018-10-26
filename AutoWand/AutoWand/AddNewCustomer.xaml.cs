@@ -55,7 +55,7 @@ namespace AutoWand
 
         private void writeCustomers()
         {
-            string path = "Students.xml";
+            string path = "Customers.xml";
 
             if (customerList.Count == 0 && File.Exists(path))
             {
@@ -94,7 +94,7 @@ namespace AutoWand
                 MessageBox.Show("A valid name and address must be given for billing purposes!");
                 control = false;
             }
-            else if (!ValidateNumerical(phoneBox.Text) && string.IsNullOrWhiteSpace(phoneBox.Text))
+            else if (!ValidateNumerical(phoneBox.Text) || string.IsNullOrWhiteSpace(phoneBox.Text))
             {
                 phoneBox.Background = Brushes.Red;
                 control = false;
@@ -102,9 +102,13 @@ namespace AutoWand
             else if (string.IsNullOrWhiteSpace(emailBox.Text))
             {
                 emailBox.Background = Brushes.Red;
-                control = false;
+                control = false; 
             }
-
+            else
+            {
+                phoneBox.Background = Brushes.White;
+                emailBox.Background = Brushes.White;
+            }
             return control;
         }
         
