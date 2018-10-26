@@ -23,5 +23,15 @@ namespace AutoWand
         {
             InitializeComponent();
         }
+
+        private void AddToCart(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void RemoveFromCart(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }

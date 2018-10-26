@@ -52,12 +52,6 @@ namespace AutoWand
                 CustomerLookup lookupWin = new CustomerLookup(ref Employees, ref User); // pass users
                 lookupWin.ShowDialog();
             }
-            else
-            {
-                MessageBox.Show("Invalid username or password. Please try again.", "Invalid credentials");
-                ClearFields();
-                UsernameEntry.Focus();
-            }
         }
 
         private void ClearFields()
@@ -80,27 +74,45 @@ namespace AutoWand
                 {
                     MessageBox.Show("You do not have permission to create new users.", "Access Denied");
                 }
-                else
-                {
-                    MessageBox.Show("Invalid credentials. Please try again.", "Invalid credentials");
-                    ClearFields();
-                    UsernameEntry.Focus();
-                }
             }
         }
 
         private bool FieldsValid()
         {
-            //if(!string.IsNullOrWhiteSpace(UsernameEntry.Text) && 
-            //   !string.IsNullOrWhiteSpace(PasswordEntry.Password))
-            //{
-                User = Employees.FirstOrDefault(e => e.UserName == UsernameEntry.Text);
-                if (User?.Password == PasswordEntry.Password)
-                {
-                    return true;
-                }
-            //}
-            return false;
+            bool valid = true;
+            if (string.IsNullOrWhiteSpace(UsernameEntry.Text))
+            {
+                UsernameEntry.BorderBrush = Brushes.Red;
+                valid = false;
+            }
+            if (string.IsNullOrWhiteSpace(PasswordEntry.Password))
+            {
+                PasswordEntry.BorderBrush = Brushes.Red;
+                valid = false;
+            }
+            if (!valid) return false; // returns before User is assigned
+
+            User = Employees.FirstOrDefault(e => e.UserName == UsernameEntry.Text);
+            if (User?.Password != PasswordEntry.Password)
+            {
+                valid = false;
+                MessageBox.Show("Invalid username or password. Please try again.", "Invalid credentials");
+                ClearFields();
+                UsernameEntry.Focus();
+            }
+            return valid;
+        }
+
+        private void TextBoxChanged(object sender, TextChangedEventArgs e)
+        {
+            TextBox tb = (sender as TextBox);
+            tb.BorderBrush = Brushes.DarkGray;
+        }
+
+        private void PasswordBoxChanged(object sender, RoutedEventArgs e)
+        {
+            PasswordBox pb = (sender as PasswordBox);
+            pb.BorderBrush = Brushes.DarkGray;
         }
     }
 }
