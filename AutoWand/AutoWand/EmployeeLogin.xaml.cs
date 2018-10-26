@@ -49,7 +49,7 @@ namespace AutoWand
             // if fields valid
             if (FieldsValid())
             {
-                CustomerLookup lookupWin = new CustomerLookup(ref Employees, ref User); // pass users
+                CustomerFinder lookupWin = new CustomerFinder(ref Employees, ref User); // pass users
                 lookupWin.ShowDialog();
             }
         }
