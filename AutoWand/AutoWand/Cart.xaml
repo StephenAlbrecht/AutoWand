@@ -6,12 +6,37 @@
         xmlns:local="clr-namespace:AutoWand"
         mc:Ignorable="d"
         Title="Cart - AutoWand" Height="600" Width="800">
+
+    <Window.Resources>
+        <DataTemplate x:Key="ServiceTemplate">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="150"/>
+                    <ColumnDefinition Width="60"/>
+                    <ColumnDefinition Width="60"/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="auto"/>
+                </Grid.RowDefinitions>
+                <TextBlock Grid.Column="0" Grid.Row="0" FontWeight="Bold" Text="{Binding Name}"/>
+                <TextBlock Grid.Column="1" Grid.Row="0" HorizontalAlignment="Right" Text="Parts"/>
+                <TextBlock Grid.Column="1" Grid.Row="1" HorizontalAlignment="Right" Text="Labor"/>
+                <TextBlock Grid.Column="1" Grid.Row="2" HorizontalAlignment="Right" Text="Total"/>
+                <TextBlock Grid.Column="2" Grid.Row="0" HorizontalAlignment="Right" Text="{Binding PartsCost, StringFormat=N2}"/>
+                <TextBlock Grid.Column="2" Grid.Row="1" HorizontalAlignment="Right" Text="{Binding LaborCost, StringFormat=N2}"/>
+                <TextBlock Grid.Column="2" Grid.Row="2" HorizontalAlignment="Right" FontWeight="Bold" Text="{Binding Total, StringFormat=N2}"/>
+            </Grid>
+        </DataTemplate>
+    </Window.Resources>
+
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="15"/>
             <RowDefinition Height="auto"/>
             <RowDefinition Height="auto"/>
-            <RowDefinition/>
+            <RowDefinition Height="30"/>
             <RowDefinition/>
             <RowDefinition/>
             <RowDefinition/>
@@ -30,7 +55,7 @@
             <ColumnDefinition/>
             <ColumnDefinition Width="15"/>
         </Grid.ColumnDefinitions>
-        <Label Grid.Column="1" Grid.Row="1" Content="Customer: "/>
+        <Label Grid.Column="1" Grid.Row="1" Content="Customer: " x:Name="CustomerLabel"/>
         <StackPanel Orientation="Horizontal" Grid.Column="1" Grid.Row="2" Grid.ColumnSpan="3">
             <Label Content="Year:"/>
             <TextBox Height="22" Width="50" x:Name="YearEntry" Margin="0,0,10,0"/>
@@ -41,26 +66,26 @@
             <Label Content="Trim:"/>
             <TextBox Height="22" Width="50" x:Name="TrimEntry"/>
         </StackPanel>
-        <Label Grid.Column="1" Grid.Row="3" Content="Services" FontSize="18" FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Bottom"/>
-        <Label Grid.Column="3" Grid.Row="3" Content="Cart" FontSize="18" FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Bottom"/>
-
-        <ListView Grid.Column="1" Grid.Row="4" Grid.RowSpan="8" x:Name="ServicesListView">
-            <ListView.ContextMenu>
-                <!--Menu for ListView-->
+        <Label Grid.Column="1" Grid.Row="3" FontSize="12" FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Bottom" Content="Services"/>
+        <Label Grid.Column="3" Grid.Row="3" FontSize="12" FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Bottom" Content="Cart" />
+        
+        <ListBox Grid.Column="1" Grid.Row="4" Grid.RowSpan="8" x:Name="ServicesListBox" ItemsSource="{Binding Services}" 
+                 SelectedItem="{Binding SelectedService}" ItemTemplate="{StaticResource ServiceTemplate}">
+            <ListBox.ContextMenu>
                 <ContextMenu>
                     <MenuItem Header="Add to Cart" Click="AddToCart"/>
                 </ContextMenu>
-            </ListView.ContextMenu>
-        </ListView>
+            </ListBox.ContextMenu>
+        </ListBox>
 
-        <ListView Grid.Column="3" Grid.Row="4" Grid.RowSpan="8" x:Name="CartListView">
-            <ListView.ContextMenu>
-                <!--Menu for ListView-->
+        <ListBox Grid.Column="3" Grid.Row="4" Grid.RowSpan="8" x:Name="CartListView" ItemsSource="{Binding CartServices}" 
+                 SelectedItem="{Binding SelectedCartService}" ItemTemplate="{StaticResource ServiceTemplate}">
+            <ListBox.ContextMenu>
                 <ContextMenu>
                     <MenuItem Header="Remove from Cart" Click="RemoveFromCart"/>
                 </ContextMenu>
-            </ListView.ContextMenu>
-        </ListView>
+            </ListBox.ContextMenu>
+        </ListBox>
 
         <Grid Grid.Column="3" Grid.Row="12">
             <Grid.ColumnDefinitions>
@@ -72,17 +97,20 @@
                 <RowDefinition Height="auto"/>
                 <RowDefinition Height="auto"/>
             </Grid.RowDefinitions>
-            <Label Grid.Column="0" Grid.Row="0" HorizontalAlignment="Right" Content="Item Total:"/>
-            <Label Grid.Column="0" Grid.Row="1" HorizontalAlignment="Right" Content="Tax:"/>
-            <Label Grid.Column="0" Grid.Row="2" HorizontalAlignment="Right" Content="Total:"/>
+            <Label Grid.Column="0" Grid.Row="0" HorizontalAlignment="Right" Content="Item Total"/>
+            <Label Grid.Column="0" Grid.Row="1" HorizontalAlignment="Right" Content="Tax"/>
+            <Label Grid.Column="0" Grid.Row="2" HorizontalAlignment="Right" Content="Total"/>
+            <Label Grid.Column="1" Grid.Row="0" HorizontalAlignment="Right" Content="0.00"/>
+            <Label Grid.Column="1" Grid.Row="1" HorizontalAlignment="Right" Content="0.00"/>
+            <Label Grid.Column="1" Grid.Row="2" HorizontalAlignment="Right" Content="0.00"/>
         </Grid>
 
         <Button Grid.Column="2" Grid.Row="7" Content="Add to Cart" Width="130" Height="30" Click="AddToCart"/>
         <Button Grid.Column="2" Grid.Row="8" Content="Remove from Cart" Width="130" Height="30" Click="RemoveFromCart"/>
 
         <StackPanel Orientation="Horizontal" Grid.Column="3" Grid.Row="13" HorizontalAlignment="Right">
-            <Button Width="120" Height="22" Content="Continue" Margin="0,0,10,0"/>
-            <Button Width="120" Height="22" Content="Cancel" IsCancel="True"/>
+            <Button Width="120" Height="22" Content="Continue" Margin="0,0,10,0" Click="SubmitCommand"/>
+            <Button Width="120" Height="22" Content="Cancel" IsCancel="True" Click="CancelCommand"/>
         </StackPanel>
     </Grid>
 </Window>

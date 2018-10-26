@@ -36,14 +36,14 @@ namespace AutoWand
             if (verifyData())
             {
                 Customer tempCust = new Customer();
-                tempCust.firstName = fNameBox.Text;
-                tempCust.lastName = lNameBox.Text;
-                tempCust.phoneNumber = phoneBox.Text;
-                tempCust.custAddr = $"{streetBox.Text}, {cityBox.Text}, {stateBox.Text}, {zipBox.Text}";
+                tempCust.FirstName = fNameBox.Text;
+                tempCust.LastName = lNameBox.Text;
+                tempCust.PhoneNumber = phoneBox.Text;
+                tempCust.Address = $"{streetBox.Text}, {cityBox.Text}, {stateBox.Text}, {zipBox.Text}";
 
                 if (!string.IsNullOrWhiteSpace(emailBox.Text))
                 {
-                    tempCust.emailAddress = emailBox.Text;
+                    tempCust.EmailAddress = emailBox.Text;
                 }
                 customerList.Add(tempCust);
                 writeCustomers();

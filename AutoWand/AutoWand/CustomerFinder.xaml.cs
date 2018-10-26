@@ -55,7 +55,7 @@ namespace AutoWand
         {
             foreach (Customer temp in customerCollection)
             {
-                if (firstName.Equals(temp.firstName) && lastName.Equals(temp.lastName))
+                if (firstName.Equals(temp.FirstName) && lastName.Equals(temp.LastName))
                 {
                     return temp;
                 }
@@ -66,7 +66,7 @@ namespace AutoWand
         {
             foreach (Customer temp in customerCollection)
             {
-                if (email.Equals(temp.emailAddress))
+                if (email.Equals(temp.EmailAddress))
                 {
                     return temp;
                 }
@@ -77,7 +77,7 @@ namespace AutoWand
         {
             foreach (Customer temp in customerCollection)
             {
-                if (phoneNumber.Equals(temp.phoneNumber))
+                if (phoneNumber.Equals(temp.PhoneNumber))
                 {
                     return temp;
                 }
@@ -157,8 +157,8 @@ namespace AutoWand
             Customer output = customerBox.SelectedItem as Customer;
             if (output != null)
             {
-                //Cart newCart = new Cart(ref User, ref custOut);  //This still needs to be edited to pass customers and employees to the cart window
-                //newCart.ShowDialog();
+                Cart newCart = new Cart(ref User, ref output);  //This still needs to be edited to pass customers and employees to the cart window
+                newCart.ShowDialog();
             }
         }
     }

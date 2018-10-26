@@ -12,23 +12,23 @@ namespace AutoWand
     {
         //name
         [XmlAttribute(DataType = "string")]
-        public string firstName { get; set; }
+        public string FirstName { get; set; }
         [XmlAttribute(DataType = "string")]
-        public string lastName { get; set; }
+        public string LastName { get; set; }
 
         //address class
         [XmlAttribute(DataType = "string")]
-        public string custAddr { get; set; } //we will simply take all of the different address elements
+        public string Address { get; set; } //we will simply take all of the different address elements
                                                //and add them to a single string
         //personal contact details
         [XmlAttribute(DataType = "string")]
-        public string phoneNumber { get; set; }
+        public string PhoneNumber { get; set; }
         [XmlAttribute(DataType = "string")]
-        public string emailAddress { get; set; }
+        public string EmailAddress { get; set; }
 
         public override string ToString()
         {
-            return $"{firstName}   {lastName}   {emailAddress}   {phoneNumber}";
+            return $"{FirstName}   {LastName}   {EmailAddress}   {PhoneNumber}";
         }
 
         public Customer()
@@ -36,13 +36,13 @@ namespace AutoWand
 
         }
 
-        public Customer(string firstName, string lastName, string custAddr, string phoneNumber, string emailAddress)
+        public Customer(string firstName, string lastName, string address, string phoneNumber, string emailAddress)
         {
-            this.firstName = firstName;
-            this.lastName = lastName;
-            this.custAddr = custAddr;
-            this.phoneNumber = phoneNumber;
-            this.emailAddress = emailAddress;
+            FirstName = firstName;
+            LastName = lastName;
+            Address = address;
+            PhoneNumber = phoneNumber;
+            EmailAddress = emailAddress;
         }
     }
 }
