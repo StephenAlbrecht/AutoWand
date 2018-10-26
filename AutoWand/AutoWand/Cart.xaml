@@ -11,9 +11,9 @@
         <DataTemplate x:Key="ServiceTemplate">
             <Grid>
                 <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width=""/>
-                    <ColumnDefinition/>
-                    <ColumnDefinition/>
+                    <ColumnDefinition Width="190"/>
+                    <ColumnDefinition Width="60"/>
+                    <ColumnDefinition Width="60"/>
                 </Grid.ColumnDefinitions>
                 <Grid.RowDefinitions>
                     <RowDefinition Height="auto"/>
