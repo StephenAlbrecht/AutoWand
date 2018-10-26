@@ -12,6 +12,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using System.Xml.Serialization;
 
 namespace AutoWand
 {
@@ -21,6 +22,8 @@ namespace AutoWand
     public partial class AddNewCustomer : Window
     {
         ObservableCollection<Customer> customerList = new ObservableCollection<Customer>();
+        XmlSerializer xmler = new XmlSerializer(typeof(ObservableCollection<Customer>));
+
         public AddNewCustomer(ref ObservableCollection<Customer> customers)
         {
             InitializeComponent();
@@ -54,8 +57,7 @@ namespace AutoWand
         {
             return tester.Where(x => char.IsNumber(x)).Count() == tester.Length; // lambda checking each char in string for letter
         }
-
-
+        
         private bool verifyData() {
             bool control = true;
 
@@ -78,8 +80,7 @@ namespace AutoWand
 
             return control;
         }
-
-
+        
         private void cancelClick(object sender, RoutedEventArgs e)
         {
             this.Close();
