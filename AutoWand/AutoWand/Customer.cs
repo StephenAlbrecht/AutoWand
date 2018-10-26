@@ -28,7 +28,7 @@ namespace AutoWand
 
         public override string ToString()
         {
-            return $"{firstName}   {lastName}   {emailAddress}   {phoneNumber}";
+            return $"{FirstName}   {LastName}   {EmailAddress}   {PhoneNumber}";
         }
 
         public Customer()
@@ -43,11 +43,6 @@ namespace AutoWand
             Address = address;
             PhoneNumber = phoneNumber;
             EmailAddress = emailAddress;
-        }
-
-        public override string ToString()
-        {
-            return $"{FirstName} {LastName}";
         }
     }
 }
