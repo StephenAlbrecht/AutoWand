@@ -21,11 +21,11 @@
         </Grid.ColumnDefinitions>
         <StackPanel Grid.Column="1" Grid.Row="1" Orientation="Horizontal" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="5"  FocusManager.FocusedElement="{Binding ElementName=UsernameEntry}">
             <Label Content="Username:"/>
-            <TextBox x:Name="UsernameEntry" Width="185" Height="20"/>
+            <TextBox TextChanged="TextBoxChanged" x:Name="UsernameEntry" Width="185" Height="20"/>
         </StackPanel>
         <StackPanel Grid.Column="1" Grid.Row="2" Orientation="Horizontal" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="5">
             <Label Content="Password:"/>
-            <PasswordBox x:Name="PasswordEntry" Width="185" Height="20"/>
+            <PasswordBox PasswordChanged="PasswordBoxChanged" x:Name="PasswordEntry" Width="185" Height="20"/>
         </StackPanel>
         <StackPanel Grid.Column="1" Grid.Row="3" Orientation="Horizontal" HorizontalAlignment="Center">
             <Button Content="Log In" Width="120" Height="22" Margin="5" Click="LogInClick" IsDefault="True"/>
