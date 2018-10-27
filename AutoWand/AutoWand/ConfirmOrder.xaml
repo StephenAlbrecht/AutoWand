@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:AutoWand"
         mc:Ignorable="d"
-        Title="ConfirmOrder" Height="700" Width="466.189" ResizeMode="NoResize">
+        Title="Confirm Order - AutoWand" Height="700" Width="466.189" ResizeMode="NoResize">
     <DockPanel>
         <StackPanel DockPanel.Dock="Top">
             <StackPanel Orientation="Horizontal" >

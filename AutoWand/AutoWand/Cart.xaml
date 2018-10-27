@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:AutoWand"
         mc:Ignorable="d"
-        Title="Cart - AutoWand" Height="600" Width="800">
+        Title="Cart - AutoWand" Height="600" Width="800" ResizeMode="NoResize">
 
     <Window.Resources>
         <DataTemplate x:Key="ServiceTemplate">
