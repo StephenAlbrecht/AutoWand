@@ -50,40 +50,6 @@ namespace AutoWand
             customerBox.ItemsSource = customerCollection;
         }
 
-        //Helper functions for validation and searching through the list to find customers
-        private Customer searchByName(string firstName, string lastName)
-        {
-            foreach (Customer temp in customerCollection)
-            {
-                if (firstName.Equals(temp.FirstName) && lastName.Equals(temp.LastName))
-                {
-                    return temp;
-                }
-            }
-            return null;
-        }
-        private Customer searchByEmail(string email)
-        {
-            foreach (Customer temp in customerCollection)
-            {
-                if (email.Equals(temp.EmailAddress))
-                {
-                    return temp;
-                }
-            }
-            return null;
-        }
-        private Customer searchByPhone(string phoneNumber)
-        {
-            foreach (Customer temp in customerCollection)
-            {
-                if (phoneNumber.Equals(temp.PhoneNumber))
-                {
-                    return temp;
-                }
-            }
-            return null;
-        }
         private bool ValidateAlphabetical(string tester)
         {
             return tester.Where(x => char.IsLetter(x)).Count() == tester.Length; // lambda checking each char in string for letter
@@ -100,49 +66,44 @@ namespace AutoWand
             if (string.IsNullOrWhiteSpace(fNameBox.Text) || string.IsNullOrWhiteSpace(lNameBox.Text) 
                 || !ValidateAlphabetical(fNameBox.Text) || !ValidateAlphabetical(lNameBox.Text))
             {
-                MessageBox.Show("Please enter valid names to search for!");
+                MessageBox.Show("Please enter valid names to search for.");
             }
             else
             {
-                custOut = searchByName(fNameBox.Text, lNameBox.Text);
-                customerOutCol.Add(custOut);
-                customerBox.ItemsSource = customerOutCol;
+                customerBox.ItemsSource = new ObservableCollection<Customer>(customerCollection
+                    .Where(c => c.FirstName == fNameBox.Text && c.LastName == lNameBox.Text));
             }
         }
 
         private void searchPhoneButton_Click(object sender, RoutedEventArgs e)
         {
-            ObservableCollection<Customer> customerOutCol = new ObservableCollection<Customer>();
             if (string.IsNullOrWhiteSpace(phoneBox.Text) ||  !ValidateNumerical(phoneBox.Text))
             {
-                MessageBox.Show("Please enter a valid phone number to search for!");
+                MessageBox.Show("Please enter a valid phone number to search for.");
             }
             else
             {
-                custOut = searchByPhone(phoneBox.Text);
-                customerOutCol.Add(custOut);
-                customerBox.ItemsSource = customerOutCol;
+                customerBox.ItemsSource = new ObservableCollection<Customer>(customerCollection
+                    .Where(c => c.PhoneNumber == phoneBox.Text));
             }
         }
 
         private void searchEmailButton_Click(object sender, RoutedEventArgs e)
         {
-            ObservableCollection<Customer> customerOutCol = new ObservableCollection<Customer>();
             if (string.IsNullOrWhiteSpace(emailBox.Text))
             {
-               MessageBox.Show("Please enter a valid email address to search for!");
+               MessageBox.Show("Please enter a valid email address to search for.");
             }
             else
             {
-                custOut = searchByEmail(emailBox.Text);
-                customerOutCol.Add(custOut);
-                customerBox.ItemsSource = customerOutCol;
+                customerBox.ItemsSource = new ObservableCollection<Customer>(customerCollection
+                    .Where(c => c.EmailAddress == emailBox.Text));
             }
         }
 
         private void cancelClick(object sender, RoutedEventArgs e)
         {
-            this.Close();
+            Close();
         }
 
         
@@ -157,8 +118,12 @@ namespace AutoWand
             Customer output = customerBox.SelectedItem as Customer;
             if (output != null)
             {
-                Cart newCart = new Cart(ref User, ref output);  //This still needs to be edited to pass customers and employees to the cart window
+                Cart newCart = new Cart(ref User, ref output);
                 newCart.ShowDialog();
+            }
+            else
+            {
+                MessageBox.Show("No customer selected. Select a customer or add a new one.", "Cannot Continue");
             }
         }
     }
