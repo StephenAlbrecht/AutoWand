@@ -119,7 +119,9 @@ namespace AutoWand
             if (output != null)
             {
                 Cart newCart = new Cart(ref User, ref output);
+                this.Close();
                 newCart.ShowDialog();
+                
             }
             else
             {

@@ -31,5 +31,10 @@ namespace AutoWand
             //Total = PartsCost + LaborCost;
             Total = total;
         }
+
+        public override string ToString()
+        {
+            return $" Service: {Name}   Combined Cost: {PartsCost + LaborCost}.00";
+        }
     }
 }

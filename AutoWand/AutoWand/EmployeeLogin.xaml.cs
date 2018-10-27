@@ -50,6 +50,7 @@ namespace AutoWand
             if (FieldsValid())
             {
                 CustomerFinder lookupWin = new CustomerFinder(ref Employees, ref User); // pass users
+                this.Close();
                 lookupWin.ShowDialog();
             }
         }
@@ -66,6 +67,7 @@ namespace AutoWand
             if (FieldsValid() && (User.Permission == 'M' || User.Permission == 'A'))
             {
                 AddNewEmployee newEmployeeWin = new AddNewEmployee(ref Employees, ref User); // pass users
+                
                 newEmployeeWin.ShowDialog();
             }
             else

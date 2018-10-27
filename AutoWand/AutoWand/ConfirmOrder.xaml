@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:AutoWand"
         mc:Ignorable="d"
-        Title="ConfirmOrder" Height="684.221" Width="466.189" ResizeMode="NoResize">
+        Title="ConfirmOrder" Height="700" Width="466.189" ResizeMode="NoResize">
     <DockPanel>
         <StackPanel DockPanel.Dock="Top">
             <StackPanel Orientation="Horizontal" >
@@ -18,8 +18,21 @@
                 <Label x:Name="custInfo" Content="  "/>
             </StackPanel>
 
-            <StackPanel x:Name="servicesList" Height="500" Width="380">
-                
+            <StackPanel Orientation="Horizontal" >
+                <Label Content="Vehicle Info:" />
+                <Label x:Name="vicInfo" Content="  "/>
+            </StackPanel>
+
+            <ListView x:Name="servicesList" Height="430" Width="390"/>
+
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" >
+                <Label Content="Cost Of Labor:" />
+                <Label x:Name="laborTotal" Content="  "/>
+            </StackPanel>
+
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" >
+                <Label Content="Parts Total:" />
+                <Label x:Name="partsTotal" Content="  "/>
             </StackPanel>
 
             <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" >
@@ -34,7 +47,13 @@
 
             <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
                 <Label Content="Total:" />
-                <Label x:Name="total" Content="  "/>
+                <Label x:Name="Total" Content="  "/>
+            </StackPanel>
+
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                <Button x:Name="SubmitButton" Content="Confirm Order" Click="SubmitButton_Click"/>
+                <Label Content="  "/>
+                <Button x:Name="CancelButton" Content="Cancel Order" Click="CancelButton_Click"/>
             </StackPanel>
         </StackPanel>
     </DockPanel>
