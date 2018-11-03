@@ -73,3 +73,28 @@ C:\Users\steph\Dropbox\School\Software-System-Devlopment\AutoWand\AutoWand\obj\D
 C:\Users\steph\Dropbox\School\Software-System-Devlopment\AutoWand\AutoWand\obj\Debug\CustomerFinder.baml
 C:\Users\Beast\Documents\College\C3\Midterm\Software-System-Devlopment\AutoWand\AutoWand\obj\Debug\CustomerFinder.g.cs
 C:\Users\Beast\Documents\College\C3\Midterm\Software-System-Devlopment\AutoWand\AutoWand\obj\Debug\CustomerFinder.baml
+C:\Users\Beast\Documents\College\Software Systems\Midterm\Software-System-Devlopment\AutoWand\AutoWand\bin\Debug\AutoWand.exe.config
+C:\Users\Beast\Documents\College\Software Systems\Midterm\Software-System-Devlopment\AutoWand\AutoWand\bin\Debug\AutoWand.exe
+C:\Users\Beast\Documents\College\Software Systems\Midterm\Software-System-Devlopment\AutoWand\AutoWand\bin\Debug\AutoWand.pdb
+C:\Users\Beast\Documents\College\Software Systems\Midterm\Software-System-Devlopment\AutoWand\AutoWand\obj\Debug\AutoWand.csprojAssemblyReference.cache
+C:\Users\Beast\Documents\College\Software Systems\Midterm\Software-System-Devlopment\AutoWand\AutoWand\obj\Debug\AddNewCustomer.g.cs
+C:\Users\Beast\Documents\College\Software Systems\Midterm\Software-System-Devlopment\AutoWand\AutoWand\obj\Debug\AddNewEmployee.g.cs
+C:\Users\Beast\Documents\College\Software Systems\Midterm\Software-System-Devlopment\AutoWand\AutoWand\obj\Debug\Cart.g.cs
+C:\Users\Beast\Documents\College\Software Systems\Midterm\Software-System-Devlopment\AutoWand\AutoWand\obj\Debug\ConfirmOrder.g.cs
+C:\Users\Beast\Documents\College\Software Systems\Midterm\Software-System-Devlopment\AutoWand\AutoWand\obj\Debug\CustomerFinder.g.cs
+C:\Users\Beast\Documents\College\Software Systems\Midterm\Software-System-Devlopment\AutoWand\AutoWand\obj\Debug\EmployeeLogin.g.cs
+C:\Users\Beast\Documents\College\Software Systems\Midterm\Software-System-Devlopment\AutoWand\AutoWand\obj\Debug\App.g.cs
+C:\Users\Beast\Documents\College\Software Systems\Midterm\Software-System-Devlopment\AutoWand\AutoWand\obj\Debug\AutoWand_MarkupCompile.cache
+C:\Users\Beast\Documents\College\Software Systems\Midterm\Software-System-Devlopment\AutoWand\AutoWand\obj\Debug\AutoWand_MarkupCompile.lref
+C:\Users\Beast\Documents\College\Software Systems\Midterm\Software-System-Devlopment\AutoWand\AutoWand\obj\Debug\AddNewCustomer.baml
+C:\Users\Beast\Documents\College\Software Systems\Midterm\Software-System-Devlopment\AutoWand\AutoWand\obj\Debug\AddNewEmployee.baml
+C:\Users\Beast\Documents\College\Software Systems\Midterm\Software-System-Devlopment\AutoWand\AutoWand\obj\Debug\Cart.baml
+C:\Users\Beast\Documents\College\Software Systems\Midterm\Software-System-Devlopment\AutoWand\AutoWand\obj\Debug\ConfirmOrder.baml
+C:\Users\Beast\Documents\College\Software Systems\Midterm\Software-System-Devlopment\AutoWand\AutoWand\obj\Debug\CustomerFinder.baml
+C:\Users\Beast\Documents\College\Software Systems\Midterm\Software-System-Devlopment\AutoWand\AutoWand\obj\Debug\EmployeeLogin.baml
+C:\Users\Beast\Documents\College\Software Systems\Midterm\Software-System-Devlopment\AutoWand\AutoWand\obj\Debug\AutoWand.g.resources
+C:\Users\Beast\Documents\College\Software Systems\Midterm\Software-System-Devlopment\AutoWand\AutoWand\obj\Debug\AutoWand.Properties.Resources.resources
+C:\Users\Beast\Documents\College\Software Systems\Midterm\Software-System-Devlopment\AutoWand\AutoWand\obj\Debug\AutoWand.csproj.GenerateResource.cache
+C:\Users\Beast\Documents\College\Software Systems\Midterm\Software-System-Devlopment\AutoWand\AutoWand\obj\Debug\AutoWand.csproj.CoreCompileInputs.cache
+C:\Users\Beast\Documents\College\Software Systems\Midterm\Software-System-Devlopment\AutoWand\AutoWand\obj\Debug\AutoWand.exe
+C:\Users\Beast\Documents\College\Software Systems\Midterm\Software-System-Devlopment\AutoWand\AutoWand\obj\Debug\AutoWand.pdb
