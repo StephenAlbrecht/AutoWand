@@ -8,48 +8,48 @@
         Title="Add New Customer - AutoWand" Height="250" Width="500" ResizeMode="NoResize">
     <Grid>
         <Grid.RowDefinitions>
-            <RowDefinition/>
-            <RowDefinition/>
-            <RowDefinition/>
-            <RowDefinition/>
-            <RowDefinition/>
+            <RowDefinition Height="44*"/>
+            <RowDefinition Height="44*"/>
+            <RowDefinition Height="44"/>
+            <RowDefinition Height="44*"/>
+            <RowDefinition Height="45*"/>
         </Grid.RowDefinitions>
 
         <StackPanel DockPanel.Dock ="Top" Orientation="Horizontal" Grid.Row="0" VerticalAlignment="Center">
             <Label Content="First Name" FontSize="10" Height="21" VerticalAlignment="Top"/>
-            <TextBox x:Name="fNameBox" Width="100" Height="20" VerticalAlignment="Center"/>
+            <TextBox Text="{Binding firstName}" x:Name="fNameBox" Width="100" Height="20" VerticalAlignment="Center"/>
 
             <Label Content="Last Name" FontSize="10" Height="21" VerticalAlignment="Top"/>
-            <TextBox x:Name="lNameBox" Width="100" Height="20" VerticalAlignment="Center"/>
+            <TextBox Text="{Binding lastName}" x:Name="lNameBox" Width="100" Height="20" VerticalAlignment="Center"/>
         </StackPanel>
 
         <StackPanel DockPanel.Dock ="Top" Orientation="Horizontal" Grid.Row="1" VerticalAlignment="Center">
             <Label Content="Street and House #" FontSize="10" Height="21" VerticalAlignment="Top"/>
-            <TextBox x:Name="streetBox" Width="100" Height="20" VerticalAlignment="Center"/>
+            <TextBox Text="{Binding street}" x:Name="streetBox" Width="100" Height="20" VerticalAlignment="Center"/>
 
             <Label Content="City" FontSize="10" Height="23" VerticalAlignment="Top"/>
-            <TextBox x:Name="cityBox" Width="100" Height="20" VerticalAlignment="Center"/>
+            <TextBox Text="{Binding city}" x:Name="cityBox" Width="100" Height="20" VerticalAlignment="Center"/>
 
             <Label Content="State" FontSize="10" Height="21" VerticalAlignment="Top"/>
-            <TextBox x:Name="stateBox" Width="30" Height="20" VerticalAlignment="Center" MaxLength="2"/>
+            <TextBox Text="{Binding state}" x:Name="stateBox" Width="30" Height="20" VerticalAlignment="Center" MaxLength="2"/>
 
             <Label Content="Zipcode" FontSize="10" Height="23" VerticalAlignment="Top"/>
-            <TextBox x:Name="zipBox" Width="50" Height="20" VerticalAlignment="Center" MaxLength="5"/>
+            <TextBox Text="{Binding zipCode}" x:Name="zipBox" Width="50" Height="20" VerticalAlignment="Center" MaxLength="5"/>
         </StackPanel>
 
         <StackPanel DockPanel.Dock ="Top" Orientation="Horizontal" Grid.Row="2" VerticalAlignment="Center">
             <Label Content="Phone #" FontSize="10" Height="21" VerticalAlignment="Top"/>
-            <TextBox x:Name="phoneBox" Width="150" Height="20" VerticalAlignment="Center" MaxLength="10"/>
+            <TextBox Text="{Binding phoneNumber}" x:Name="phoneBox" Width="150" Height="20" VerticalAlignment="Center" MaxLength="10"/>
         </StackPanel>
 
         <StackPanel DockPanel.Dock ="Top" Orientation="Horizontal" Grid.Row="3" VerticalAlignment="Center">
             <Label Content="Email Address" FontSize="10" Height="21" VerticalAlignment="Top"/>
-            <TextBox x:Name="emailBox" Width="200" Height="20" VerticalAlignment="Center"/>
+            <TextBox Text="{Binding email}" x:Name="emailBox" Width="200" Height="20" VerticalAlignment="Center"/>
         </StackPanel>
 
         <StackPanel DockPanel.Dock ="Top" Orientation="Horizontal" Grid.Row="4" VerticalAlignment="Center" HorizontalAlignment="Center">
-            <Button Content="Add Customer" Width="100" VerticalAlignment ="Stretch" HorizontalAlignment="Center" Margin="3" Click="addClick" IsDefault="True"/>
-            <Button Content="Cancel" Width="100" VerticalAlignment ="Stretch" HorizontalAlignment="Center" Margin="3" Click="cancelClick" IsCancel="True"/>
+            <Button Content="Add Customer" Width="100" VerticalAlignment ="Stretch" HorizontalAlignment="Center" Margin="3" Command="{Binding addCustCommand}" IsDefault="True"/>
+            <Button Content="Cancel" Width="100" VerticalAlignment ="Stretch" HorizontalAlignment="Center" Margin="3"  IsCancel="True"/>
         </StackPanel>
     </Grid>
 </Window>

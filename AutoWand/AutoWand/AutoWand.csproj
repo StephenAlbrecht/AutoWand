@@ -55,10 +55,13 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Classes\DelegateCommand.cs" />
     <Compile Include="CustomerFinder.xaml.cs">
       <DependentUpon>CustomerFinder.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Service.cs" />
+    <Compile Include="Classes\Service.cs" />
+    <Compile Include="VewModels\AddNewCustomerVM.cs" />
+    <Compile Include="VewModels\EmployeeLoginVM.cs" />
     <Page Include="AddNewCustomer.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -99,8 +102,8 @@
     <Compile Include="ConfirmOrder.xaml.cs">
       <DependentUpon>ConfirmOrder.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Customer.cs" />
-    <Compile Include="Employee.cs" />
+    <Compile Include="Classes\Customer.cs" />
+    <Compile Include="Classes\Employee.cs" />
     <Compile Include="EmployeeLogin.xaml.cs">
       <DependentUpon>EmployeeLogin.xaml</DependentUpon>
       <SubType>Code</SubType>
@@ -131,6 +134,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="XAMLS\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

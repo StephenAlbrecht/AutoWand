@@ -36,7 +36,6 @@ namespace AutoWand
             taxLabel.Content = tax.ToString("N2");
             total = total * 1.07;
             Total.Content = total.ToString("N2");
-
         }
 
         private double laborCost(ObservableCollection<Service> services)

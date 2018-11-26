@@ -1,4 +1,5 @@
-﻿using System;
+﻿using AutoWand.VewModels;
+using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.IO;
@@ -22,60 +23,23 @@ namespace AutoWand
     /// </summary>
     public partial class AddNewCustomer : Window
     {
-        ObservableCollection<Customer> customerList = new ObservableCollection<Customer>();
-        XmlSerializer xmler = new XmlSerializer(typeof(ObservableCollection<Customer>));
-
         public AddNewCustomer(ref ObservableCollection<Customer> customers)
         {
+            AddNewCustomerVM newCust = new AddNewCustomerVM(ref customers);
             InitializeComponent();
-            customerList = customers;
+            DataContext = newCust;
             fNameBox.Focus();
         }
 
         private void addClick(object sender, RoutedEventArgs e)
         {
-            if (verifyData())
-            {
-                Customer tempCust = new Customer();
-                tempCust.FirstName = fNameBox.Text;
-                tempCust.LastName = lNameBox.Text;
-                tempCust.PhoneNumber = phoneBox.Text;
-                tempCust.Address = $"{streetBox.Text}, {cityBox.Text}, {stateBox.Text}, {zipBox.Text}";
-
-                if (!string.IsNullOrWhiteSpace(emailBox.Text))
-                {
-                    tempCust.EmailAddress = emailBox.Text;
-                }
-                customerList.Add(tempCust);
-                writeCustomers();
-
-                MessageBox.Show($"{tempCust.FirstName} {tempCust.LastName} was added to database.", "Customer Successfully Added");
-                this.Close();
-            }
-        }
-
-        private void writeCustomers()
-        {
-            string path = "Customers.xml";
-
-            if (customerList.Count == 0 && File.Exists(path))
-            {
-                File.Delete(path);
-            }
-            else
-            {
-                using (FileStream fileStream = new FileStream(path, FileMode.Create, FileAccess.ReadWrite))
-                {
-                    xmler.Serialize(fileStream, customerList);
-                }
-            }
+            verifyData();
         }
 
         private bool ValidateAlphabetical(string tester)
         {
             return tester.Where(x => char.IsLetter(x) || char.IsSeparator(x)).Count() == tester.Length; // lambda checking each char in string for letter
         }
-
         private bool ValidateNumerical(string tester)
         {
             return tester.Where(x => char.IsNumber(x)).Count() == tester.Length; // lambda checking each char in string for letter
@@ -100,11 +64,6 @@ namespace AutoWand
                 phoneBox.BorderBrush = Brushes.Red;
                 control = false;
             }
-            else if (string.IsNullOrWhiteSpace(emailBox.Text))
-            {
-                emailBox.BorderBrush = Brushes.Red;
-                control = false; 
-            }
             else
             {
                 phoneBox.BorderBrush = Brushes.DarkGray;
@@ -115,7 +74,7 @@ namespace AutoWand
         
         private void cancelClick(object sender, RoutedEventArgs e)
         {
-            Close();
+            this.Close();
         }
     }
 }

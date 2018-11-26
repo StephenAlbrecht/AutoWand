@@ -21,15 +21,15 @@
         </Grid.ColumnDefinitions>
         <StackPanel Grid.Column="1" Grid.Row="1" Orientation="Horizontal" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="5"  FocusManager.FocusedElement="{Binding ElementName=UsernameEntry}">
             <Label Content="Username:"/>
-            <TextBox TextChanged="TextBoxChanged" x:Name="UsernameEntry" Width="185" Height="20"/>
+            <TextBox TextChanged="TextBoxChanged" x:Name="UsernameEntry" Width="185" Height="20" Text="{Binding userName}"/>
         </StackPanel>
         <StackPanel Grid.Column="1" Grid.Row="2" Orientation="Horizontal" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="5">
             <Label Content="Password:"/>
-            <PasswordBox PasswordChanged="PasswordBoxChanged" x:Name="PasswordEntry" Width="185" Height="20"/>
+            <TextBox TextChanged="TextBoxChanged" x:Name="PasswordEntry" Width="185" Height="20" Text= "{Binding Password}"/>
         </StackPanel>
         <StackPanel Grid.Column="1" Grid.Row="3" Orientation="Horizontal" HorizontalAlignment="Center">
-            <Button Content="Log In" Width="120" Height="22" Margin="5" Click="LogInClick" IsDefault="True"/>
-            <Button Content="Add New Employee" Width="120" Height="22" Margin="5" Click="AddNewEmployeeClick"/>
+            <Button Content="Log In" Width="120" Height="22" Margin="5" Command="{Binding loginCommand}" Click="LogInClick" IsDefault="True" />
+            <Button Content="Add New Employee" Width="120" Height="22" Margin="5"  Command="{Binding addNewEmpCommand}"/>
         </StackPanel>
     </Grid>
 </Window>
