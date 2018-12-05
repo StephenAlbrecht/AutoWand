@@ -58,6 +58,9 @@
     <Compile Include="EditCustomer.xaml.cs">
       <DependentUpon>EditCustomer.xaml</DependentUpon>
     </Compile>
+    <Compile Include="EditEmployee.xaml.cs">
+      <DependentUpon>EditEmployee.xaml</DependentUpon>
+    </Compile>
     <Compile Include="VewModels\AddServiceDisplayVM.cs" />
     <Compile Include="AddEditService.xaml.cs">
       <DependentUpon>AddEditService.xaml</DependentUpon>
@@ -103,6 +106,10 @@
     <Page Include="EditCustomer.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
+    </Page>
+    <Page Include="EditEmployee.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="EmployeeLogin.xaml">
       <Generator>MSBuild:Compile</Generator>

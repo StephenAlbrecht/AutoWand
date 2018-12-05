@@ -141,5 +141,11 @@ namespace AutoWand
                 MessageBox.Show("No customer selected. Select a customer or add a new one.", "Cannot Continue");
             }
         }
+
+        private void MenuItem_Click(object sender, RoutedEventArgs e)
+        {
+            EditEmployee edit = new EditEmployee(ref Employees,ref User);
+            edit.ShowDialog();
+        }
     }
 }
