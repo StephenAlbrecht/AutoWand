@@ -4,4 +4,5 @@
   <Employee ID="450147" FirstName="Ted" LastName="Danson" UserName="tdanson" Password="cheers" Permission="77" />
   <Employee ID="348012" FirstName="Shelley" LastName="Long" UserName="slong" Password="cheers" Permission="69" />
   <Employee ID="542996" FirstName="shan" LastName="sumi" UserName="sumishan" Password="1234" Permission="77" />
+  <Employee ID="503015" FirstName="Steve" LastName="Harris" UserName="sharris" Password="1" Permission="69" />
 </ArrayOfEmployee>
