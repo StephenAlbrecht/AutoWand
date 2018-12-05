@@ -51,10 +51,13 @@
         <StackPanel DockPanel.Dock="Bottom" Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Right">
             <Button x:Name="customerSelectButton" Content="Select Customer" Width="110" Height="20" HorizontalAlignment="Right" Click="customerSelectButton_Click" />
             <Label Content = "  "/>
-            
+
             <Button Content="Add New Customer" Width="110" Height="20" HorizontalAlignment="Right" Click="addNewCustomer" />
             <Label Content = "  "/>
-            
+
+            <Button x:Name="customerEditButton" Content="Edit Customer" Width="110" Height="20" HorizontalAlignment="Right" Click="customerEditButton_Click"/>
+            <Label Content = "  "/>
+
             <Button Content="Cancel" Width="80" Height="20" HorizontalAlignment="Right" Click="cancelClick" />
             <Label Content = "  "/>
         </StackPanel>

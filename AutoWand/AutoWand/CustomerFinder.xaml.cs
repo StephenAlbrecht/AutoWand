@@ -128,5 +128,18 @@ namespace AutoWand
                 MessageBox.Show("No customer selected. Select a customer or add a new one.", "Cannot Continue");
             }
         }
+
+        private void customerEditButton_Click(object sender, RoutedEventArgs e)
+        {
+            Customer cust = customerBox.SelectedItem as Customer;
+            if (cust != null) {
+                EditCustomer edit = new EditCustomer(ref cust);
+                edit.ShowDialog();
+            }
+            else
+            {
+                MessageBox.Show("No customer selected. Select a customer or add a new one.", "Cannot Continue");
+            }
+        }
     }
 }
