@@ -100,12 +100,13 @@ namespace AutoWand.VewModels
                 AddNewEmployee newEmployeeWin = new AddNewEmployee(ref Employees, ref User); // pass users
                 newEmployeeWin.ShowDialog();
             }
+            else if (FieldsValid() && User.Permission == 'E')
+            {
+                MessageBox.Show("You do not have permission to create new users.", "Access Denied");
+            }
             else
             {
-                if (User.Permission == 'E' && FieldsValid())
-                {
-                    MessageBox.Show("You do not have permission to create new users.", "Access Denied");
-                }
+                MessageBox.Show("Enter a valid username and password to add a new employee.", "Login Error");  
             }
         }
         //command Structure for addnewemployeeClick command

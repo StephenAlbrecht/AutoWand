@@ -63,6 +63,14 @@ namespace AutoWand
             }
         }
 
+        private void AddService(object sender, RoutedEventArgs e)
+        {
+            AddEditService addServiceWin = new AddEditService();
+            addServiceWin.ShowDialog();
+            ReadInServices();
+            ServicesListBox.ItemsSource = Services;
+        }
+
         private void RemoveFromCart(object sender, RoutedEventArgs e)
         {
             if(CartListView.SelectedIndex != -1)

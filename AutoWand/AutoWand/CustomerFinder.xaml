@@ -8,19 +8,12 @@
         Title="Customer Lookup - AutoWand" Height="450" Width="800" ResizeMode="NoResize">
     
     <DockPanel>
-        
-        
-        <StackPanel DockPanel.Dock="Top" Orientation="Horizontal" Height="5">
-            <Menu HorizontalAlignment="Left">
-                <Menu DockPanel.Dock="Top">
-                    <MenuItem Header="File">
-                        <MenuItem Header="Edit Current Login" Click="MenuItem_Click"/>
-                    </MenuItem>
-                </Menu>
-            </Menu>
-            <Label />
-        </StackPanel>
-
+        <Menu DockPanel.Dock="Top">
+            <MenuItem Header="File">
+                <MenuItem Header="Edit Account Info" Click="EditEmployee"/>
+            </MenuItem>
+        </Menu>
+       
         <StackPanel DockPanel.Dock="Top" Orientation="Horizontal" Height="31">
             <Label Content="First Name" Height="25" VerticalAlignment="Top"/>
             <TextBox x:Name="fNameBox" Width="150" Height="25" VerticalAlignment="Top"  Text="{Binding SelectedCustomer.FirstName}"/>

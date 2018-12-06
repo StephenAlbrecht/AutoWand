@@ -50,7 +50,12 @@ namespace AutoWand
                 Close();
             }
         }
-        
+
+        private void CancelClick(object sender, RoutedEventArgs e)
+        {
+            Close();
+        }
+
         private IEnumerable SetPermissionSelector()
         {
             if (Employ.Permission == 'A')
@@ -104,6 +109,25 @@ namespace AutoWand
 
             return valid;
         }
+        private void TextBoxChanged(object sender, TextChangedEventArgs e)
+        {
+            TextBox tb = (sender as TextBox);
+            tb.BorderBrush = Brushes.DarkGray;
+        }
 
+        private void PasswordBoxChanged(object sender, RoutedEventArgs e)
+        {
+            PasswordBox pb = (sender as PasswordBox);
+            pb.BorderBrush = Brushes.DarkGray;
+        }
+        private void PermissionClicked(object sender, MouseButtonEventArgs e)
+        {
+            PermissionError.Visibility = Visibility.Hidden;
+        }
+
+        private void PermissionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            PermissionError.Visibility = Visibility.Hidden;
+        }
     }
 }

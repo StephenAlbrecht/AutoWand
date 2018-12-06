@@ -124,10 +124,7 @@ C:\Users\Sharad Vellore\Documents\College and Documents\College\USF\FALL 2018\C#
 C:\Users\Sharad Vellore\Documents\College and Documents\College\USF\FALL 2018\C#\Midterm\Software-System-Devlopment\AutoWand\AutoWand\obj\Debug\AutoWand.exe
 C:\Users\Sharad Vellore\Documents\College and Documents\College\USF\FALL 2018\C#\Midterm\Software-System-Devlopment\AutoWand\AutoWand\obj\Debug\AutoWand.pdb
 C:\Users\steph\Dropbox\School\Software-System-Devlopment\AutoWand\AutoWand\obj\Debug\AddEditService.g.cs
-C:\Users\steph\Dropbox\School\Software-System-Devlopment\AutoWand\AutoWand\obj\Debug\AddEditServiceDisplay.g.cs
-C:\Users\steph\Dropbox\School\Software-System-Devlopment\AutoWand\AutoWand\obj\Debug\GeneratedInternalTypeHelper.g.cs
 C:\Users\steph\Dropbox\School\Software-System-Devlopment\AutoWand\AutoWand\obj\Debug\AddEditService.baml
-C:\Users\steph\Dropbox\School\Software-System-Devlopment\AutoWand\AutoWand\obj\Debug\AddEditServiceDisplay.baml
 C:\Users\Sharad Vellore\Documents\College and Documents\College\USF\FALL 2018\C#\Midterm\Software-System-Devlopment\AutoWand\AutoWand\obj\Debug\AddEditService.g.cs
 C:\Users\Sharad Vellore\Documents\College and Documents\College\USF\FALL 2018\C#\Midterm\Software-System-Devlopment\AutoWand\AutoWand\obj\Debug\AddEditServiceDisplay.g.cs
 C:\Users\Sharad Vellore\Documents\College and Documents\College\USF\FALL 2018\C#\Midterm\Software-System-Devlopment\AutoWand\AutoWand\obj\Debug\GeneratedInternalTypeHelper.g.cs
@@ -135,3 +132,7 @@ C:\Users\Sharad Vellore\Documents\College and Documents\College\USF\FALL 2018\C#
 C:\Users\Sharad Vellore\Documents\College and Documents\College\USF\FALL 2018\C#\Midterm\Software-System-Devlopment\AutoWand\AutoWand\obj\Debug\AddEditService.baml
 C:\Users\Sharad Vellore\Documents\College and Documents\College\USF\FALL 2018\C#\Midterm\Software-System-Devlopment\AutoWand\AutoWand\obj\Debug\AddEditServiceDisplay.baml
 C:\Users\Sharad Vellore\Documents\College and Documents\College\USF\FALL 2018\C#\Midterm\Software-System-Devlopment\AutoWand\AutoWand\obj\Debug\EditCustomer.baml
+C:\Users\steph\Dropbox\School\Software-System-Devlopment\AutoWand\AutoWand\obj\Debug\EditCustomer.g.cs
+C:\Users\steph\Dropbox\School\Software-System-Devlopment\AutoWand\AutoWand\obj\Debug\EditEmployee.g.cs
+C:\Users\steph\Dropbox\School\Software-System-Devlopment\AutoWand\AutoWand\obj\Debug\EditCustomer.baml
+C:\Users\steph\Dropbox\School\Software-System-Devlopment\AutoWand\AutoWand\obj\Debug\EditEmployee.baml

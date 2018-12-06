@@ -61,12 +61,8 @@
     <Compile Include="EditEmployee.xaml.cs">
       <DependentUpon>EditEmployee.xaml</DependentUpon>
     </Compile>
-    <Compile Include="VewModels\AddServiceDisplayVM.cs" />
     <Compile Include="AddEditService.xaml.cs">
       <DependentUpon>AddEditService.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="AddEditServiceDisplay.xaml.cs">
-      <DependentUpon>AddEditServiceDisplay.xaml</DependentUpon>
     </Compile>
     <Compile Include="Classes\DelegateCommand.cs" />
     <Compile Include="CustomerFinder.xaml.cs">
@@ -76,10 +72,6 @@
     <Compile Include="VewModels\AddNewCustomerVM.cs" />
     <Compile Include="VewModels\EmployeeLoginVM.cs" />
     <Page Include="AddEditService.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="AddEditServiceDisplay.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

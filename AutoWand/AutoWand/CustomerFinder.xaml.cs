@@ -142,7 +142,7 @@ namespace AutoWand
             }
         }
 
-        private void MenuItem_Click(object sender, RoutedEventArgs e)
+        private void EditEmployee(object sender, RoutedEventArgs e)
         {
             EditEmployee edit = new EditEmployee(ref Employees,ref User);
             edit.ShowDialog();
